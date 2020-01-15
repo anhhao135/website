@@ -27,6 +27,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
+a {
+	color: #f7584d;
+}
 ol, ul {
 	list-style: none;
 }
@@ -98,7 +102,7 @@ header nav{
 		margin-bottom: 10px;
 		padding: 10px;
     width: fit-content;
-		background-color: #525B56;
+		background-color: #f7584d;
 		text-align: center;
 
 
