@@ -200,3 +200,7 @@ main {
 
 	}
 }
+
+a:hover, a:active {
+  color: #4dcaf7 ;
+}
