@@ -95,11 +95,33 @@
 
    #page-container{
 
-     grid-template-columns: 4fr 9fr;
+     grid-template-columns: 2fr 9fr;
 
    }
 
  }
+
+ @media (max-width: 550px) {
+
+   #page-container{
+
+     grid-template-columns: 1fr;
+
+   }
+
+   #side-nav ul li{
+
+     display:block;
+     vertical-align: middle;
+     text-align: center;
+   }
+
+
+
+ }
+
+
+
 
 
  </style>
@@ -109,7 +131,6 @@
          <a href="index.html" class="header-brand">HAO LE</a>
          <nav>
             <ul>
-                <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="art.html">ART</a></li>
                 <li><a href="music.html">MUSIC</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -125,7 +146,7 @@
   <div id="page-container">
 
 
-    <div  style="display:inline-block; background-color:#f7584d; text-align:left; padding:5px; align-self:start; width:70%; justify-self:center; margin-top:20px;">
+    <div  style="display:inline-block; background-color:#f7584d; text-align:left; padding-left:15px; padding-right: 15px; align-self:start; width:fit-content; justify-self:center; margin-top:20px;">
 
 
     <nav id="side-nav">
