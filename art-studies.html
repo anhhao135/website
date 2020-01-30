@@ -2,13 +2,15 @@
 <html>
  <head>
     <meta charset="utf-8">
-    <title>Hao Le | Art</title>
+    <title>Hao Le | Art Studies</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
 
  </head>
  <style>
+
+
  .container {
    position: relative;
    width: 95%;
@@ -32,14 +34,6 @@
    transform: translate(-50%, -50%);
    -ms-transform: translate(-50%, -50%);
    text-align: center;
- }
-
- .container:hover .image {
-   opacity: 0.3;
- }
-
- .container:hover .middle {
-   opacity: 1;
  }
 
  .text {
@@ -95,14 +89,60 @@
 
    #page-container{
 
-     grid-template-columns: 4fr 9fr;
+     grid-template-columns: 2fr 9fr;
 
    }
 
  }
 
+ @media (max-width: 550px) {
 
- </style>
+   #page-container{
+
+     grid-template-columns: 1fr;
+
+   }
+
+   #side-nav ul li{
+
+     display:block;
+     vertical-align: middle;
+     text-align: center;
+   }
+
+
+
+ }
+
+
+ #gallery-grid{
+ 	display: inline-grid;
+ 	grid-template-columns: repeat(4, minmax(200px, 1fr));
+ 	justify-items: center;
+ 	align-items: center;
+ 	background-color: #132226;
+ 	width: auto-fit;
+ 	row-gap: 50px;
+
+
+ }
+
+ @media (max-width: 900px) {
+ 		#gallery-grid{
+ 			display: inline-grid;
+ 			grid-template-columns: 1fr;
+ 			justify-items: center;
+ 			align-items: center;
+ 	    background-color: #132226;
+ 			width: auto-fit;
+ 			row-gap: 20px;
+
+ 	}
+}
+
+   </style>
+
+
 
  <body>
      <header>
@@ -124,13 +164,13 @@
   <div id="page-container">
 
 
-    <div  style="display:inline-block; background-color:#f7584d; text-align:left; padding:5px; align-self:start; width:70%; justify-self:center; margin-top:20px;">
+    <div  style="display:inline-block; background-color:#f7584d; text-align:left; padding: 10px; align-self:start; width:fit-content; justify-self:center; margin-top:20px;">
 
 
     <nav id="side-nav">
        <ul>
-           <li><a href="art.html"">WORKS</a></li>
-           <li><a href="art-studies.html"  style="font-weight: bold" >STUDIES</a></li>
+           <li><a href="art.html">WORKS</a></li>
+           <li><a href="art-studies.html" style="font-weight:bold;">STUDIES</a></li>
        </ul>
     </nav>
 
@@ -144,52 +184,213 @@
 
 
        <div class="container">
-         <img src="art/not-seeing-is-a-flower.jpg" alt="Not Seeing is a Flower" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">dried flowers, oil on canvas, 2018</div>
-         </div>
+         <img src="art-studies/2.jpg" class="image" style="width:100%">
        </div>
 
 
        <div class="container">
-         <img src="art/self-portrait-in-garden.jpg" alt="Self-portrait in Garden" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">gold leaf, oil on canvas, 2019</div>
-         </div>
+         <img src="art-studies/1.jpg" class="image" style="width:100%">
        </div>
 
        <div class="container">
-         <img src="art/study-of-structure-1.jpg" alt="Study of Structure 1" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">ink on paper, 2019</div>
-         </div>
+         <img src="art-studies/3.jpg" class="image" style="width:100%">
        </div>
 
 
        <div class="container">
-         <img src="art/study-of-structure-2.jpg" alt="Study of Structure 2" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">ink of paper, 2019</div>
-         </div>
+         <img src="art-studies/4.jpg" class="image" style="width:100%">
        </div>
 
        <div class="container">
-         <img src="art/self-portrait.jpg" alt="Self-portrait" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">acrylic on canvas, 2018</div>
-         </div>
+         <img src="art-studies/5.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/6.jpg" class="image" style="width:100%">
        </div>
 
        <div class="container">
-         <img src="art/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">watercolor on paper, 2018</div>
-         </div>
+         <img src="art-studies/7.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/8.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/9.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/10.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/11.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/12.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/13.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/14.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/15.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/16.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/17.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/18.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/19.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/20.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/21.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/22.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/23.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/24.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/25.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies/26.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies/27.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Apr 18, 12 32 52 AM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Aug 04, 5 00 45 AM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Aug 12, 9 52 13 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Aug 29, 2 24 50 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Aug 31, 12 23 08 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Dec 02, 6 46 16 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Dec 25, 3 49 50 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Dec 29, 5 36 31 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Feb 01, 4 25 46 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Feb 01, 4 26 00 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Feb 01, 4 26 22 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Jan 01, 12 50 46 AM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Jul 17, 4 29 15 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Jul 19, 2 26 59 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Jul 19, 4 11 51 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Mar 14, 7 56 50 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Oct 02, 11 35 27 PM.jpg" class="image" style="width:100%">
+       </div>
+
+       <div class="container">
+         <img src="art-studies\Photo Oct 21, 4 07 24 PM.jpg" class="image" style="width:100%">
+       </div>
+
+
+       <div class="container">
+         <img src="art-studies\Photo Sep 18, 2 42 41 PM.jpg" class="image" style="width:100%">
        </div>
 
 
 
-
+       </div>
 
      </div>
   </div>
@@ -209,7 +410,7 @@
 
 
 
-<footer>Site build by ya boi, 2020. Thanks for stopping by!</footer>
+<footer>Hao Le, 2020. Thanks for stopping by!</footer>
 
  </body>
 
