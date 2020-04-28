@@ -14,11 +14,11 @@
    #about-container{
 
      display: inline-grid;
-     grid-template-columns: 1fr 1fr;
+     grid-template-columns: 1fr;
      justify-items: center;
      align-items: center;
      width: 80%;
-     row-gap: 50px;
+     row-gap: 30px;
      margin: 20px;
      justify-self:center;
 
@@ -30,12 +30,24 @@
      color: white;
    }
 
+   #avatar{
+     width: 80%;
+   }
+
 
    @media (max-width: 900px) {
    		#about-container{
         display: inline-grid;
         grid-template-columns: 1fr;
    	}
+
+      #avatar{
+        width: 90%;
+      }
+
+
+
+
   }
 
   .fa {
@@ -175,7 +187,7 @@ a:hover, a:active {
             <ul>
                 <li><a href="art.html">ART</a></li>
                 <li><a href="music.html">MUSIC</a></li>
-                <li><a href="projects.html">PROJECTS</a></li> 
+                <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
             </ul>
          </nav>
@@ -189,10 +201,10 @@ a:hover, a:active {
  <main style="text-align:center;">
 
 
-   <div id="about-container">
+   <div id="about-container" style = "height:auto;">
 
-     <img style="width:100%;" id="profile-picture" src="img/profile.jpg">
-      <div style="width:90%; height:auto; color: white;">Hello! Thanks for checking out my bitchin' site. I don't get a lot of visitors so it's nice you're here.<br><br>I'm a second year electrical engineering student at UC San Diego. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
+     <img id ="avatar" src="img\DSC00333.jpg">
+      <div style="width:80%; height:auto; color: white; font-size: 15px;">Hello! Thanks for checking out my bitchin' site. I don't get a lot of visitors so it's nice you're here.<br><br>I'm a second year electrical engineering student at UC San Diego. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
 
         <nav id="links">
           <li><a href="https://www.linkedin.com/in/hao-le-07b726132/" class="fa fa-linkedin"></a></li>
