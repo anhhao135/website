@@ -82,7 +82,22 @@
 
 }
 
+#about-text{
+  width:70%; 
+  height:auto; 
+  color: white; 
+  font-size: 20px;
+}
+
 @media (max-width: 1100px) {
+
+
+  #about-text{
+    font-size:15px;
+    width:90%; 
+  }
+
+
   .fa {
     padding: 15px;
     width:15px;
@@ -197,7 +212,7 @@ a:hover, a:active {
 
      <img id ="avatar" src="img\DSC00333.jpg">
 
-      <div style="width:60%; height:auto; color: white; font-size: 20px;">Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a third year electrical engineering student at UC San Diego currently part of Dr. Truong Nguyen's Video Processing Lab. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
+      <div id = "about-text">Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a third year electrical engineering student at UC San Diego currently part of Dr. Truong Nguyen's Video Processing Lab. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
 
         <nav id="links">
           <li><a href="https://www.linkedin.com/in/hao-le-07b726132/" class="fa fa-linkedin"></a></li>
