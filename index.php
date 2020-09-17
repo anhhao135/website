@@ -8,16 +8,42 @@
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     </head>
 
+    <style>
+
+        #front_page_image_container{
+            width: 100%;
+            height: 80vh;
+        }
+
+        #front_image{
+
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+
+        }
+
+    </style>
+
 
 <body>
+
+
+
+
 
 <?php include("boilerplate/header.php") ?> 
 
 
-<main>
-    <div id="home-picture">
-    </div>
-</main>
+
+<div id = "front_page_image_container">
+
+<img id="front_image" src="art\home-pic.jpg"/>
+
+
+
+</div>
+
 
 <?php include("boilerplate/footer.php") ?> 
 

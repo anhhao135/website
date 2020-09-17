@@ -6,7 +6,7 @@
 
  <head>
     <meta charset="utf-8">
-    <title>Hao Le | Projects</title>
+    <title>Hao Le | Research</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
   justify-items: center;
   align-items: center;
   row-gap: 10px;
-  max-width: 80%;
+  max-width: 90%;
 
  }
 
@@ -49,7 +49,7 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin-left: 30px;
   overflow: hidden;
   height: 90%;
 }
@@ -72,11 +72,11 @@ h1{
   #project-object{
  	display: inline-grid;
  	width: auto;
-  height: 70vh;
-  padding: 10px;
-
+  height: auto;
+  padding: 0px;
   grid-template-columns: 1fr;
   align-items: center;
+  justify-items: center;
  }
 
 
@@ -87,6 +87,23 @@ h1{
   text-align: center;
   align-items: center;
   color: white;
+  
+}
+
+
+.project_image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 90%;
+  width:100%;
+  background-color: green;
+  margin-left: 0px;
+}
+
+p{
+  font-size:14px;
 }
 
 
@@ -112,13 +129,17 @@ h1{
        <div class="project_text">
          <div>
             <h1>Using Unity for Diverse Synthetic Data Generation</h1>
+            <hr>
+            <p>One of the heaviest impacting factors on resources when developing Advanced Driver Assistance Systems is the process of real data collection. A fully-equipped data rig must be deployed on streets for extended periods; this proves to be expensive in areas of hardware maintenance, data post-processing, and manual annotation subject to human error. Moreover, diversity is constrained to geography - in other words, there is so that can be captured within the 24 hours of a day.</p>
             <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>We propose an automated pipeline to leverage the scripting and physics capabilities of the Unity game engine to generate synthetic data sets cost-effectively. A wide range of data formats can be produced including RGB-D to Velodyne-like point clouds. Total control of the environment via generation parameters means synthetic augmentations such as lighting, weather, and scene context can be manipulated. The effects of these augmentations on neural network performance on crucial scene-understanding tasks like 2D/3D object detection or instance segmentation can therefore be rigorously studied. Preliminary results show that our synthetic data holds the potential to boost 2D object detection performance and model robustness.</p>
+            <br>
+            <p>Aside from being a means of data generation, our Unity platform can serve as a safe testbed for collaborative algorithms. A complex road network utilizing V2X techniques can be adequately simulated while taking into account bandwidth constraints.</p>
           </div>
        </div>
 
        <div class="project_image">
-         <img src="img\67575624_2599020146774717_7906070739281772544_n.jpg" style="flex-shrink:0; height:100%"/>
+         <img src="img/synthetic_collage.png" style="flex-shrink:0; height:100%; width: 100%; object-fit: cover;"/>
        </div>
      </div>
 

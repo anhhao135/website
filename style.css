@@ -151,6 +151,7 @@ footer{
 
 main {
 	text-align: center;
+	min-height: 70vh;
 }
 
 #copyright {
