@@ -172,242 +172,30 @@
 
    <div id="gallery">
 
-     <div id="gallery-grid">
+     <div id="gallery-grid"> 
 
 
-       <div class="container">
-         <img src="art-studies\4_15__1.jpg" class="image" style="width:100%">
-       </div>
+        <?php
+          $directory = 'art-studies';
 
-       <div class="container">
-         <img src="art-studies\4_15__2.jpg" class="image" style="width:100%">
-       </div>
+          if (!is_dir($directory)) {
+              exit('Invalid diretory path');
+          }
 
-       <div class="container">
-         <img src="art-studies\4_15__3.jpg" class="image" style="width:100%">
-       </div>
+          foreach (scandir($directory) as $file) {
+              if ($file !== '.' && $file !== '..') {
+                  
+                //files[] = $file;
 
-       <div class="container">
-         <img src="art-studies\4_15__4.jpg" class="image" style="width:100%">
-       </div>
+                $relative_path = $directory . '/' . $file;
 
-       <div class="container">
-         <img src="art-studies\4_15__5.jpg" class="image" style="width:100%">
-       </div>
+                echo '<div class="container"> <img src="' . $relative_path . '" class="image" style="width:100%"> </div>'; //construct image div by iterating through directory
 
-       <div class="container">
-         <img src="art-studies\4_15__6.jpg" class="image" style="width:100%">
-       </div>
+              }
+          }
 
-
-
-       <div class="container">
-         <img src="art-studies/2.jpg" class="image" style="width:100%">
-       </div>
-
-
-
-       <div class="container">
-         <img src="art-studies/1.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/3.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/4.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/5.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/6.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/7.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/8.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/9.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/10.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/11.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/12.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/13.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/14.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/15.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/16.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/17.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/18.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/19.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/20.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/21.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/22.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/23.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/24.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/25.JPG" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies/26.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies/27.JPG" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Apr 18, 12 32 52 AM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Aug 04, 5 00 45 AM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Aug 12, 9 52 13 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Aug 29, 2 24 50 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Aug 31, 12 23 08 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Dec 02, 6 46 16 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Dec 25, 3 49 50 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Dec 29, 5 36 31 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Feb 01, 4 25 46 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Feb 01, 4 26 00 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Feb 01, 4 26 22 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Jan 01, 12 50 46 AM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Jul 17, 4 29 15 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Jul 19, 2 26 59 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Jul 19, 4 11 51 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Mar 14, 7 56 50 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Oct 02, 11 35 27 PM.jpg" class="image" style="width:100%">
-       </div>
-
-       <div class="container">
-         <img src="art-studies\Photo Oct 21, 4 07 24 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
-       <div class="container">
-         <img src="art-studies\Photo Sep 18, 2 42 41 PM.jpg" class="image" style="width:100%">
-       </div>
-
-
+          //var_dump($files); this will show structured info of the variable
+        ?>
 
        </div>
 
