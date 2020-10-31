@@ -210,7 +210,7 @@ a:hover, a:active {
 
    <div id="about-container" style = "height:auto;">
 
-     <img id ="avatar" src="img\DSC00333.jpg">
+     <img id ="avatar" src="img\profile-pic.jpg">
 
       <div id = "about-text">Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a third year electrical engineering student at UC San Diego currently part of Dr. Truong Nguyen's Video Processing Lab. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
 
