@@ -56,7 +56,7 @@ table {
 
 body {
 
-    background-color: #132226;
+    background-color: #0d131a;
 		font-family: Inconsolata;
 		color: black;
 
@@ -64,7 +64,7 @@ body {
 
 header {
 
-    background-color: #132226;
+    background-color: #0d131a;
     width: 100%;
     height: auto;
 		text-align: center;
@@ -171,7 +171,6 @@ main {
 	width: auto-fit;
 	height: auto-fit;
 	padding: 20px;
-	background-color: #132226;
 
 
 
@@ -182,7 +181,6 @@ main {
 	grid-template-columns: repeat(2, minmax(200px, 1fr));
 	justify-items: center;
 	align-items: center;
-	background-color: #132226;
 	width: auto-fit;
 	row-gap: 50px;
 
@@ -195,7 +193,6 @@ main {
 			grid-template-columns: 1fr;
 			justify-items: center;
 			align-items: center;
-	    background-color: #132226;
 			width: auto-fit;
 			row-gap: 20px;
 

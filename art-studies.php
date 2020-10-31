@@ -120,7 +120,6 @@
  	grid-template-columns: repeat(3, minmax(200px, 1fr));
  	justify-items: center;
  	align-items: center;
- 	background-color: #132226;
  	width: auto-fit;
  	row-gap: 50px;
 
@@ -133,7 +132,6 @@
  			grid-template-columns: 1fr;
  			justify-items: center;
  			align-items: center;
- 	    background-color: #132226;
  			width: auto-fit;
  			row-gap: 20px;
 
