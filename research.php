@@ -142,7 +142,7 @@ p{
     <div id ="project-object">
        <div class="project_text">
          <div>
-            <h1 style="font-size: 27px">Unity3D Game Engine as a Versatile Synthetic Generation Platform</h1>
+            <h1 style="font-size: 23px">Unity3D Game Engine as a Versatile Synthetic Data Generation Platform</h1>
             <hr>
             <p>One of the heaviest impacting factors on resources when developing Advanced Driver Assistance Systems is the process of real data collection. A fully-equipped data rig must be deployed on streets for extended periods; this proves to be expensive in areas of hardware maintenance, data post-processing, and manual annotation subject to human error. Moreover, diversity is constrained to geography - in other words, there is only so much that can be captured within the 24 hours of a day.</p>
             <br>
