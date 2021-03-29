@@ -155,6 +155,13 @@
 
      <div id="gallery-grid">
 
+       <div class="container">
+         <img src="art/emigrate.jpg" alt="Emigrate" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">oil on canvas, 2021</div>
+         </div>
+       </div>
+
 
 
        <div class="container">

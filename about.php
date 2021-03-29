@@ -17,11 +17,24 @@
      grid-template-columns: 1fr;
      justify-items: center;
      align-items: center;
-     width: 80%;
+     width: 90%;
      row-gap: 30px;
      margin: 20px;
      justify-self:center;
+     background-color:pink;
+   }
 
+   #about-images-container{
+     display: flex;
+     height: 50vh;
+     width: 100%;
+     justify-content: center;
+     align-items: center;
+     background-color:yellow;
+   }
+
+   #about-images-item{
+     height: 100%;
 
    }
 
@@ -33,7 +46,18 @@
    #avatar{
      max-width: 80%;
      max-height: 70vh;
+     display: flex;
    }
+
+  #about-text{
+    width:200px; 
+    height:100px; 
+    color: white; 
+    font-size: 20px;
+    background-color: red;
+  }
+
+
 
 
    @media (max-width: 900px) {
@@ -82,12 +106,7 @@
 
 }
 
-#about-text{
-  width:70%; 
-  height:auto; 
-  color: white; 
-  font-size: 20px;
-}
+
 
 @media (max-width: 1100px) {
 
@@ -210,14 +229,27 @@ a:hover, a:active {
 
    <div id="about-container" style = "height:auto;">
 
-     <img id ="avatar" src="img\profile-pic.jpg">
+    <div id="about-images-container">
 
-      <div id = "about-text">Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a third year electrical engineering student at UC San Diego currently part of Dr. Truong Nguyen's Video Processing Lab. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
+      <img id="about-images-item" src="img/about-2.jpg">
+      <img id="about-images-item" src="img/about-1.jpg">
+      <img id="about-images-item" src="img/about-3.jpg">
+
+    </div>
+
+    <div id = "about-text">
+    Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a third year electrical engineering student at UC San Diego currently part of Dr. Truong Nguyen's Video Processing Lab. I minor in studio arts.<br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">Github</a> for this whole site.<br><br>My <a href="resume.pdf">resume</a>.<br>
 
         <nav id="links">
           <li><a href="https://www.linkedin.com/in/hao-le-07b726132/" class="fa fa-linkedin"></a></li>
           <li><a href="https://www.youtube.com/user/404anhhao" class="fa fa-youtube"></a></li>
         </nav>
+
+    </div>
+
+  </div>
+
+
 
 
 
@@ -234,6 +266,9 @@ a:hover, a:active {
 <h3><?php include "send_form_email.php"?></h3>
 
 -->
+
+
+
 
 </main>
 

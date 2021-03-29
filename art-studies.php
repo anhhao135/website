@@ -180,7 +180,10 @@
               exit('Invalid diretory path');
           }
 
-          foreach (scandir($directory) as $file) {
+          $dir_contents = scandir($directory);
+          shuffle($dir_contents);
+
+          foreach ($dir_contents as $file) {
               if ($file !== '.' && $file !== '..') {
                   
                 //files[] = $file;
