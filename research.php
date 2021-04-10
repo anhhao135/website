@@ -35,8 +35,8 @@
  	display: inline-grid;
  	width: auto;
   height: 70vh;
-  padding: 10px;
-  margin-bottom: 40px;
+  padding: 5px;
+  margin-bottom: 5px;
 
   grid-template-columns: 5fr 4fr;
   align-items: center;
@@ -158,6 +158,9 @@ p{
          <img src="img/synthetic_collage.png" style="flex-shrink:0; height:100%; width: 100%; object-fit: cover; max-height: 600px"/>
        </div>
     </div>
+
+
+    <iframe style="margin:30px" width="60%" height="500vh" src="https://www.youtube.com/embed/ptkTKS5itWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 2fr 5fr;">
 

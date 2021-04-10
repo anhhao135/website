@@ -33,8 +33,8 @@
    }
 
    #avatar{
-     max-width: 80%;
-     max-height: 70vh;
+     max-width: 100%;
+     max-height: 80vh;
    }
 
 

@@ -15,9 +15,13 @@
 
  <?php include("boilerplate/header.php") ?> 
 
- <main>
+ <main style="display:flex; flex-direction:column; align-items:center; ">
 
-<iframe style="height:80vh;" width="95%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+ <div style="color:white; width:80%; margin:30px;">
+   <p>Music I make from time to time.</p>
+ </div>
+
+<iframe style="height:80vh;" width="80%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 
 </main>
