@@ -41,7 +41,7 @@
 
 <div id = "front_page_image_container">
 
-<img id="front_image" src="art/self-portrait-in-garden-home-pic.jpg"/>
+<img id="front_image" src="art/home-pic.jpg"/>
 
 
 
