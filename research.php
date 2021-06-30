@@ -148,7 +148,7 @@ h1{
 <main>
 
   <div id="construction-placeholder" style="color:white">
-      still under construction for mobile, sorry :/
+      Still under construction for mobile, sorry! :/ Page is viewable on desktop, though!
   </div>
 
 
