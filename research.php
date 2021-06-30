@@ -28,7 +28,6 @@
   align-items: center;
   row-gap: 10px;
   max-width: 90%;
-
  }
 
  #project-object{
@@ -82,68 +81,44 @@ h1{
 
 @media (max-width: 1200px) {
 
-  #project-object{
- 	display: inline-grid;
- 	width: auto;
-  height: auto;
-  padding: 0px;
-  grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
- }
-
-
- .project_text{
-  display: flex;
-  padding: 10px;
-  height: 100%;
-  text-align: center;
-  align-items: center;
-  color: white;
-  
-}
-
-
-.project_image{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height: 90%;
-  width:100%;
-  background-color: green;
-  margin-left: 0px;
-}
-
-p{
-  font-size:14px;
-}
-
-
-
-
-
-
-}
-
-
-}
-
-
-@media (max-width: 1100px) {
-  .main-body{
+  #main-body{
     display: none;
   }
 
+  #project-object{
+    display: inline-grid;
+    width: auto;
+    height: auto;
+    padding: 0px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+ }
+
+ .project_text{
+    display: flex;
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    color: white;
+  }
+
+  .project_image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 90%;
+    width:100%;
+    background-color: green;
+    margin-left: 0px;
+  }
+
+  p{
+    font-size:14px;
+  }
 }
-
-  
-
-  
-
-
-
-
 
 </style>
 
@@ -154,7 +129,7 @@ p{
 
 
 <main>
-   <div id="main-body" class="main-body">
+   <div id="main-body">
 
 
     <div id ="project-object">
