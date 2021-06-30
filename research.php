@@ -129,7 +129,23 @@ p{
 
 }
 
- </style>
+
+@media (max-width: 1100px) {
+  .main-body{
+    display: none;
+  }
+
+}
+
+  
+
+  
+
+
+
+
+
+</style>
 
 <body>
 
@@ -138,7 +154,7 @@ p{
 
 
 <main>
-   <div id="main-body">
+   <div id="main-body" class="main-body">
 
 
     <div id ="project-object">
@@ -203,6 +219,9 @@ p{
     </div>
 
 
+
+
+
     <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 5fr 2fr">
 
       <div style="display:flex;; width:100%; height:auto;"> 
@@ -230,6 +249,9 @@ p{
       </div>
     
     </div>
+
+
+
 
     <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 2fr 5fr">
 
