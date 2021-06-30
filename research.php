@@ -78,12 +78,17 @@ h1{
 
 
 
+@media (min-width: 1200px){
+
+  #construction-placeholder{
+    display: none;
+  }
+
+}
 
 @media (max-width: 1200px) {
 
-  #construction-placeholder{
-    display: inline-grid;
-  }
+
 
   #main-body{
     display: none;
@@ -142,7 +147,7 @@ h1{
 
 <main>
 
-  <div id="construction-placeholder" style="display: none">
+  <div id="construction-placeholder">
       still under construction for mobile, sorry :/
   </div>
 
