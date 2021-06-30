@@ -120,6 +120,14 @@ h1{
   }
 }
 
+@media (max-width: 1500px){
+
+  p{
+    font-size:12px;
+  }
+  
+}
+
 </style>
 
 <body>
