@@ -147,7 +147,7 @@ h1{
 
 <main>
 
-  <div id="construction-placeholder">
+  <div id="construction-placeholder" style="color:white">
       still under construction for mobile, sorry :/
   </div>
 
