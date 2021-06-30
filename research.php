@@ -142,7 +142,7 @@ h1{
 
 <main>
 
-  <div id="construction-placeholder" style="display:hidden; background-color:pink">
+  <div id="construction-placeholder" style="display:hidden; background-color:pink; color:white">
       still under construction for mobile, sorry :/
   </div>
 
