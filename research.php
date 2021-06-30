@@ -197,7 +197,7 @@ h1{
         <div style="display: flex; ; height: auto;align-items: center;justify-items: center;padding: 5px">
         
           <video class="center" controls autoplay>
-            <source src="research_unity\auto_data_collect.mp4" type="video/mp4">
+            <source src="research_unity\auto_data_collect.mp4" type="video/mp4" preload="none">
           </video>
         
         </div>
@@ -225,7 +225,7 @@ h1{
       
 
         <video class="center" controls autoplay>
-          <source src="research_unity\multiview.mp4" type="video/mp4">
+          <source src="research_unity\multiview.mp4" type="video/mp4" preload="none">
         </video>
 
 
@@ -272,7 +272,7 @@ h1{
         <div style="display: flex; height: auto;align-items: center;justify-items: center;padding: 5px">
         
           <video class="center" controls autoplay>
-            <source src="research_unity\cycle.mp4" type="video/mp4">
+            <source src="research_unity\cycle.mp4" type="video/mp4" preload="none">
           </video>
         
         </div>
@@ -280,7 +280,7 @@ h1{
 
         <div style="display: flex; height: auto;align-items: center;justify-items: center;padding: 5px">
           <video class="center" controls autoplay>
-            <source src="research_unity\foggy driving.mp4" type="video/mp4">
+            <source src="research_unity\foggy driving.mp4" type="video/mp4" preload="none">
           </video>
         </div>
       
@@ -352,7 +352,7 @@ h1{
         <div style="display: flex; height: auto;align-items: center;justify-items: center;padding: 5px">
         
           <video class="center" controls autoplay>
-            <source src="research_unity\gizmo_intersection.mp4" type="video/mp4">
+            <source src="research_unity\gizmo_intersection.mp4" type="video/mp4" preload="none">
           </video>
         
         </div>
@@ -360,7 +360,7 @@ h1{
 
         <div style="display: flex; height: auto;align-items: center;justify-items: center;padding: 5px;">
           <video class="center" controls autoplay>
-            <source src="research_unity\collaboration.mp4" type="video/mp4">
+            <source src="research_unity\collaboration.mp4" type="video/mp4" preload="none">
           </video>
         </div>
       
