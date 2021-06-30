@@ -159,7 +159,8 @@ h1{
     </div>
 
 
-    <iframe style="margin:30px" width="60%" height="500vh" src="https://www.youtube.com/embed/ptkTKS5itWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe style="margin:30px" width="60%" height="50vh" src="https://www.youtube.com/embed/ptkTKS5itWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
     <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 2fr 5fr;">
 
