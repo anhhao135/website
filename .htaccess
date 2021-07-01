@@ -1,8 +1,13 @@
+RewriteEngine On# proc/self/environ? no way!
 ErrorDocument 404 /404.html
+
 Options -Indexes
+
 RewriteCond %{HTTPS} off
 RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI}
-RewriteEngine On# proc/self/environ? no way!
+
+
+
 RewriteCond %{QUERY_STRING} proc/self/environ [OR]# Block out any script trying to set a mosConfig value through the URL
 RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [OR]# Block out any script trying to base64_encode crap to send via URL
 RewriteCond %{QUERY_STRING} base64_encode.*(.*) [OR]# Block out any script that includes a  tag in URL
