@@ -21,7 +21,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       color: white;
-      text-shadow: 3px 3px #000000;
+      text-shadow: 2px 2px #000000;
     }
 
     .player {
