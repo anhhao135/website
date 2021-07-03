@@ -209,6 +209,13 @@
         image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
         path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
       },
+
+      {
+        name: "Diana",
+        artist: "John Le",
+        image: "img/IMG_4033.JPG",
+        path: "music/diana.mp3",
+      },
     ];
 
     function loadTrack(track_index) {
