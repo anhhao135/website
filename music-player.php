@@ -13,7 +13,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
     body {
-      background-image = url("..\img\sara-kassab-2021.jpeg");
       font-family: 'Inconsolata', monospace;
 
       /* Smoothly transition the background color */
@@ -337,6 +336,7 @@
 
     // Load the first track in the tracklist
     loadTrack(track_index);
+    document.body.style.backgroundImage = "url('..\img\TRIANGL_SARIA_VINCA_CLIO_2_025_2000x.progressive.jpg')"
   </script>
 </body>
 
