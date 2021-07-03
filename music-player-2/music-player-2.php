@@ -32,13 +32,7 @@
 
         <div class="slider__content">
 
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/1.jpg" alt="cover">
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/2.jpg" alt="cover">
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/3.jpg" alt="cover">
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/4.jpg" alt="cover">
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/5.jpg" alt="cover">
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/6.jpg" alt="cover">
-          <img class="img slider__img" src="http://physical-authority.surge.sh/imgs/7.jpg" alt="cover">
+          <img class="img slider__img" src="..\img\phucnguyenn_60795615_205097390464094_2841667732337502767_n.jpg" alt="cover">
 
         </div>
 
