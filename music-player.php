@@ -200,30 +200,24 @@
     // Define the tracks that have to be played
     let track_list = [
       {
-        name: "Night Owl",
-        artist: "Broke For Free",
-        image: "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-        path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
-      },
-      {
-        name: "Enthusiast",
-        artist: "Tours",
-        image: "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-        path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
-      },
-      {
-        name: "Shipping Lanes",
-        artist: "Chad Crouch",
-        image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-        path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
-      },
-
-      {
         name: "Diana",
         artist: "John Le",
         image: "img/IMG_4033.JPG",
         path: "music/diana.mp3",
       },
+      {
+        name: "Care",
+        artist: "John Le",
+        image: "img/IMG_1790.jpg",
+        path: "music/care.mp3",
+      },
+      {
+        name: "Home",
+        artist: "John Le",
+        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        path: "music/home.mp3",
+      },
+      
     ];
 
     function loadTrack(track_index) {
