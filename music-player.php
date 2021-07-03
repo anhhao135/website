@@ -9,9 +9,12 @@
 
   <!-- CSS style -->
   <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
     body {
       background-color: lightgreen;
-      font-family: Inconsolata;
+      font-family: 'Inconsolata', monospace;
 
       /* Smoothly transition the background color */
       transition: background-color .5s;
