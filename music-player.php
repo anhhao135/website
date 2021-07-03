@@ -20,6 +20,8 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      color: white;
+      text-shadow: 2px 2px #ff0000;
     }
 
     .player {
@@ -27,8 +29,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      justify-content: center;
-      background-color: white;
+
     }
 
     .details {
