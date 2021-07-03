@@ -73,7 +73,7 @@
 
       <li class="player__song">
 
-        <img class="player__img img" src="img\81884974_3054139197938944_6775622483547521024_o.jpg" alt="cover">
+        <img class="player__img img" src="..\img\81884974_3054139197938944_6775622483547521024_o.jpg" alt="cover">
 
         <p class="player__context">
 
@@ -87,7 +87,7 @@
 
         </p>
 
-        <audio class="audio" src="music/diana.mp3"></audio>
+        <audio class="audio" src="../music/diana.mp3"></audio>
 
       </li>
 
