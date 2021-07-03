@@ -25,6 +25,7 @@
     }
 
     .player {
+      padding-top: 100px;
       height: 95vh;
       display: flex;
       align-items: center;
