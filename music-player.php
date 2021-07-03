@@ -336,7 +336,7 @@
 
     // Load the first track in the tracklist
     loadTrack(track_index);
-    document.body.style.backgroundImage = "url('img\TRIANGL_SARIA_VINCA_CLIO_2_025_2000x.progressive.jpg')"
+    document.body.style.backgroundImage = "url('img/TRIANGL_SARIA_VINCA_CLIO_2_025_2000x.progressive.jpg')"
   </script>
 </body>
 
