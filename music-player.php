@@ -11,6 +11,7 @@
   <style>
     body {
       background-color: lightgreen;
+      font-family: Inconsolata;
 
       /* Smoothly transition the background color */
       transition: background-color .5s;
