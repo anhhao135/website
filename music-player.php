@@ -13,7 +13,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
     body {
-      background-color: lightgreen;
+      background-image = url("..\img\sara-kassab-2021.jpeg");
       font-family: 'Inconsolata', monospace;
 
       /* Smoothly transition the background color */
@@ -241,9 +241,6 @@
 
       // Move to the next track if the current one finishes playing
       curr_track.addEventListener("ended", nextTrack);
-
-      // Apply a random background color
-      random_bg_color();
     }
 
     function random_bg_color() {
