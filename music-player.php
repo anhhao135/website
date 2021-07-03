@@ -17,6 +17,9 @@
 
       /* Smoothly transition the background color */
       transition: background-color .5s;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
 
     .player {
