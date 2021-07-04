@@ -147,6 +147,18 @@
     i.fa-step-backward {
       cursor: pointer;
     }
+
+
+    @media screen and (max-width: 700px){
+
+      .track-name {
+      font-size: 2rem;
+    }
+
+    }
+  }
+}
+    
   </style>
 </head>
 
