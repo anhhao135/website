@@ -22,13 +22,6 @@
       background-size: cover;
       color: white;
 
-      text-shadow:
-        0.07em 0 black,
-        0 0.07em black,
-        -0.07em 0 black,
-        0 -0.07em black;
-      
-      
     }
 
     .player {
@@ -342,7 +335,7 @@
 
     // Load the first track in the tracklist
     loadTrack(track_index);
-    document.body.style.backgroundImage = "url('img/house.jpg')"
+    document.body.style.backgroundImage = "url('img/sunset.jpg')"
   </script>
 </body>
 
