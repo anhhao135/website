@@ -218,67 +218,67 @@
       {
         name: "Maybe, Sometimes",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/maybe-sometimes.mp3",
       },
       {
         name: "Diana",
         artist: "John Le",
-        image: "img/IMG_4033.JPG",
+        image: "img/sunset.jpg",
         path: "music/diana.mp3",
       },
       {
         name: "Care",
         artist: "John Le",
-        image: "img/IMG_1790.jpg",
+        image: "img/sunset.jpg",
         path: "music/care.mp3",
       },
       {
         name: "Home",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/home.mp3",
       },
       {
         name: "Past",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/past.mp3",
       },
       {
         name: "Laketown",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/laketown.mp3",
       },
       {
         name: "All The Birds, They Sing About You",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/all-the-birds.mp3",
       },
       {
         name: "Coffee",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/coffee.mp3",
       },
       {
         name: "I Think You're The Most Wonderful Person To Exist In Time And Space ",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/wonderful.mp3",
       },
       {
         name: "Better For Me",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/better-for-me.mp3",
       },
       {
         name: "$20",
         artist: "John Le",
-        image: "img/alexafallica_96358197_237433300870186_332833967297321057_n.jpg",
+        image: "img/sunset.jpg",
         path: "music/$20.mp3",
       },
       
@@ -400,7 +400,7 @@
 
     // Load the first track in the tracklist
     loadTrack(track_index);
-    document.body.style.backgroundImage = "url('img/sunset.jpg')"
+    document.body.style.backgroundImage = "url('img/slide_5.jpg')"
   </script>
 
   <?php include("boilerplate/footer.php") ?> 
