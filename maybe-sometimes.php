@@ -31,7 +31,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      text-shadow: 2px 2px;
+      text-shadow: 1px 1px #000000;
 
     }
 
