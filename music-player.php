@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Music Player</title>
+  <title>Hao Le | Maybe, Sometimes</title>
   <!-- Load FontAwesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <?php include("boilerplate/favicon.php") ?> 
 
   <!-- CSS style -->
   <style>
@@ -163,6 +165,7 @@
 </head>
 
 <body>
+  <?php include("boilerplate/header.php") ?> 
   <div class="player">
     <div class="details">
       <div class="now-playing">PLAYING x OF y</div>
@@ -399,6 +402,9 @@
     loadTrack(track_index);
     document.body.style.backgroundImage = "url('img/sunset.jpg')"
   </script>
+
+  <?php include("boilerplate/footer.php") ?> 
+
 </body>
 
 </html>					
