@@ -55,6 +55,7 @@
 
     .track-name {
       font-size: 3rem;
+      text-align: center;
     }
 
     .track-artist {
