@@ -27,7 +27,7 @@
     }
 
     .player {
-      height: 95vh;
+      height: 80vh;
       display: flex;
       align-items: center;
       flex-direction: column;
