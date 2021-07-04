@@ -31,6 +31,7 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      text-shadow: 2px 2px;
 
     }
 
@@ -400,7 +401,7 @@
 
     // Load the first track in the tracklist
     loadTrack(track_index);
-    document.body.style.backgroundImage = "url('img/slide_5.jpg')"
+    document.body.style.backgroundImage = "url('img/9420b2dbea75840a1771a7254b72cdd9.jpg')"
   </script>
 
   <?php include("boilerplate/footer.php") ?> 
