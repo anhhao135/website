@@ -7,6 +7,7 @@
         <ul>
             <li><a href="art.php">ART</a></li>
             <li><a href="music.php">MUSIC</a></li>
+            <li><a href="maybe-sometimes.php">MUSIC</a></li>
             <li><a href="research.php">RESEARCH</a></li> 
             <li><a href="about.php">ABOUT</a></li>
         </ul>
