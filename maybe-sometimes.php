@@ -19,19 +19,24 @@
 
       /* Smoothly transition the background color */
       transition: background-color .5s;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
       color: white;
+
 
     }
 
     .player {
-      height: 80vh;
+      height: 100%;
       display: flex;
       align-items: center;
       flex-direction: column;
       text-shadow: 1px 1px #000000;
+      background-image: url('img/9420b2dbea75840a1771a7254b72cdd9.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-bottom: 60px;
+      padding-top: 45px;
+
 
     }
 
@@ -159,14 +164,15 @@
     }
 
     }
-  }
-}
+  
+
     
   </style>
 </head>
 
 <body>
   <?php include("boilerplate/header.php") ?> 
+
   <div class="player">
     <div class="details">
       <div class="now-playing">PLAYING x OF y</div>
@@ -401,11 +407,12 @@
 
     // Load the first track in the tracklist
     loadTrack(track_index);
-    document.body.style.backgroundImage = "url('img/9420b2dbea75840a1771a7254b72cdd9.jpg')"
   </script>
 
-  <?php include("boilerplate/footer.php") ?> 
+
 
 </body>
+
+<?php include("boilerplate/footer.php") ?> 
 
 </html>					

@@ -44,7 +44,7 @@
 h1{
   font-size: 25px;
   font-weight: bold;
-}
+} 
 
 
 .project_image{
@@ -66,6 +66,10 @@ h1{
   font-size: 20px;
 }
 
+.project_text p{
+    font-size: 18px;
+  }
+
 
 .center {
     margin-left: auto;
@@ -75,24 +79,22 @@ h1{
     height: auto;
 }
 
-
-
-
-@media (min-width: 1200px){
-
-  #construction-placeholder{
-    display: none;
-  }
-
+.project-object-type-1{
+  display:inline-grid;
+  width:100%;
+  height: 450px;
+  grid-template-columns: 2fr 5fr;
 }
 
+.project-object-type-2{
+  display:inline-grid;
+  width:100%;
+  height: 450px;
+  grid-template-columns: 5fr 2fr;
+}
+
+
 @media (max-width: 1200px) {
-
-
-
-  #main-body{
-    display: none;
-  }
 
   #project-object{
     display: inline-grid;
@@ -113,6 +115,10 @@ h1{
     color: white;
   }
 
+  .project_text p{
+    font-size: 16px;
+  }
+
   .project_image{
     display: flex;
     justify-content: center;
@@ -124,15 +130,26 @@ h1{
     margin-left: 0px;
   }
 
-  p{
-    font-size:12px;
+  .project-object-type-1{
+    display:inline-grid;
+    width:100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size:15px;
   }
-}
 
-@media (max-width: 1500px){
+  .project-object-type-2{
+    display:inline-grid;
+    width:100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size:15px;
+  }
 
-  p{
-    font-size:16px;
+  #seminar-video{
+    width: 100%;
   }
 
 }
@@ -147,16 +164,12 @@ h1{
 
 <main>
 
-  <div id="construction-placeholder" style="color:white">
-      Still under construction for mobile, sorry! :/ Page is viewable on desktop, though!
-  </div>
-
 
   <div id="main-body">
     <div id ="project-object">
        <div class="project_text">
          <div>
-            <h1 style="font-size: 23px">Unity3D Game Engine as a Versatile Synthetic Data Generation Platform</h1>
+            <h1 style="font-size: 24px">Unity3D Game Engine as a Versatile Synthetic Data Generation Platform</h1>
             <hr>
             <p>One of the heaviest impacting factors on resources when developing Advanced Driver Assistance Systems is the process of real data collection. A fully-equipped data rig must be deployed on streets for extended periods; this proves to be expensive in areas of hardware maintenance, data post-processing, and manual annotation subject to human error. Moreover, diversity is constrained to geography - in other words, there is only so much that can be captured within the 24 hours of a day.</p>
             <br>
@@ -172,10 +185,10 @@ h1{
     </div>
 
 
-    <iframe style="margin:30px" width="50%" height="400vh" src="https://www.youtube.com/embed/ptkTKS5itWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="seminar-video" style="margin:30px" width="50%" height="400vh" src="https://www.youtube.com/embed/ptkTKS5itWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-    <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 2fr 5fr;">
+    <div class="project-object-type-1">
 
 
       
@@ -215,11 +228,7 @@ h1{
     
     </div>
 
-
-
-
-
-    <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 5fr 2fr">
+    <div class="project-object-type-2">
 
       <div style="display:flex;; width:100%; height:auto;"> 
       
@@ -247,10 +256,7 @@ h1{
     
     </div>
 
-
-
-
-    <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 2fr 5fr">
+    <div class="project-object-type-1">
 
 
       
@@ -289,7 +295,7 @@ h1{
     
     </div>
 
-    <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 5fr 2fr">
+    <div class="project-object-type-2">
 
 
 
@@ -330,7 +336,7 @@ h1{
     
     </div>
 
-    <div style="display:inline-grid; ; width:100%; height: 450px; grid-template-columns: 2fr 5fr">
+    <div class="project-object-type-1">
 
 
       
