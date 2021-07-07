@@ -79,13 +79,13 @@
 
    @media (max-width: 900px) {
    		#side-nav ul li a{
-        font-size:12px;
+        font-size:13px;
    	}
 
     #side-nav ul li{
 
       display:block;
-      padding:3px;
+      padding:0px;
    }
 
 
