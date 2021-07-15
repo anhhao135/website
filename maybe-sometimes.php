@@ -25,7 +25,7 @@
     }
 
     .player {
-      height: 100%;
+      height: 80vh;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -45,16 +45,16 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
-      margin-top: 25px;
+      margin-top: 15px;
     }
 
     .track-art {
       margin: 25px;
-      height: 250px;
-      width: 250px;
+      height: 300px;
+      width: 300px;
       background-image: url("https://images.pexels.com/photos/262034/pexels-photo-262034.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
       background-size: cover;
-      border-radius: 15%;
+      border-radius: 5%;
     }
 
     .now-playing {
@@ -62,8 +62,15 @@
     }
 
     .track-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 3rem;
       text-align: center;
+      height: 10vh;
+      margin-bottom: 20px;
+      width: 80vw;
+
     }
 
     .track-artist {
@@ -157,11 +164,14 @@
     }
 
 
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 1000px){
 
       .track-name {
-      font-size: 2rem;
-    }
+        font-size: 2rem;
+      }
+      .track-artist {
+        font-size: 1rem;
+      }
 
     }
   
@@ -178,6 +188,7 @@
       <div class="now-playing">PLAYING x OF y</div>
       <div class="track-art"></div>
       <div class="track-name">Track Name</div>
+
       <div class="track-artist">Track Artist</div>
     </div>
     <div class="buttons">
