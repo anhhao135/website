@@ -176,7 +176,7 @@
 
 
         <?php
-          $directory = 'art-studies';
+          $directory = 'art-studies-dir';
 
           if (!is_dir($directory)) {
               exit('Invalid diretory path');

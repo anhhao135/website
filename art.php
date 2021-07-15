@@ -158,7 +158,7 @@
      <div id="gallery-grid">
 
        <div class="container">
-         <img src="art/emigrate.jpg" alt="Emigrate" class="image" style="width:100%">
+         <img src="art-dir/emigrate.jpg" alt="Emigrate" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Emigrate"<br>oil on canvas, 2021</div>
          </div>
@@ -167,14 +167,14 @@
 
 
        <div class="container">
-         <img src="art/not-seeing-is-a-flower.jpg" alt="Not Seeing is a Flower" class="image" style="width:100%">
+         <img src="art-dir/not-seeing-is-a-flower.jpg" alt="Not Seeing is a Flower" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Not Seeing is a Flower"<br>dried flowers, oil on canvas, 2018</div>
          </div>
        </div>
 
        <div class="container">
-         <img src="art\synthesize.jpg" alt="Synthesize" class="image" style="width:100%">
+         <img src="art-dir\synthesize.jpg" alt="Synthesize" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Analog"<br>plywood, industrial paint, mounting brackets, wood screws, oil marker, pyrography, duct tape, 2020</div>
          </div>
@@ -182,7 +182,7 @@
 
 
        <div class="container">
-         <img src="art\pixels.jpg" alt="Interpolation" class="image" style="width:100%">
+         <img src="art-dir\pixels.jpg" alt="Interpolation" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Compressed"<br>graphite on paper, 2020</div>
          </div>
@@ -190,14 +190,14 @@
 
 
        <div class="container">
-         <img src="art/self-portrait-in-garden.jpg" alt="Self-portrait in Garden" class="image" style="width:100%">
+         <img src="art-dir/self-portrait-in-garden.jpg" alt="Self-portrait in Garden" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Self-portrait in Garden"<br>gold leaf, oil on canvas, 2019</div>
          </div>
        </div>
 
        <div class="container">
-         <img src="art/study-of-structure-1.jpg" alt="Study of Structure 1" class="image" style="width:100%">
+         <img src="art-dir/study-of-structure-1.jpg" alt="Study of Structure 1" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Study of Structure I"<br>ink on paper, 2019</div>
          </div>
@@ -205,14 +205,14 @@
 
 
        <div class="container">
-         <img src="art/study-of-structure-2.jpg" alt="Study of Structure 2" class="image" style="width:100%">
+         <img src="art-dir/study-of-structure-2.jpg" alt="Study of Structure 2" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Study of Structure II"<br>ink on paper, 2019</div>
          </div>
        </div>
 
        <div class="container">
-         <img src="art/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
+         <img src="art-dir/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Novo Amor"<br>watercolor on paper, 2018</div>
          </div>

@@ -30,7 +30,7 @@
       align-items: center;
       flex-direction: column;
       text-shadow: 1px 1px #000000;
-      background-image: url('maybe-sometimes/studio-shot.jpg');
+      background-image: url('maybe-sometimes-music-dir/studio-shot.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -216,7 +216,7 @@
     let track_index = 0;
     let isPlaying = false;
     let updateTimer;
-    let albumCoverPath = "maybe-sometimes/cover-art.PNG"
+    let albumCoverPath = "maybe-sometimes-music-dir/cover-art.PNG"
 
     // Create new audio element
     let curr_track = document.createElement('audio');
@@ -227,133 +227,133 @@
         name: "Maybe, Sometimes",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/maybe, sometimes.mp3",
+        path: "maybe-sometimes-music-dir/maybe, sometimes.mp3",
       },
       {
         name: "Home",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/home.mp3",
+        path: "maybe-sometimes-music-dir/home.mp3",
       },
       {
         name: "All The Birds, They Sing About You",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/all the birds, they sing about you.mp3",
+        path: "maybe-sometimes-music-dir/all the birds, they sing about you.mp3",
       },
       {
         name: "Bitter",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/bitter.mp3",
+        path: "maybe-sometimes-music-dir/bitter.mp3",
       },
       {
         name: "Laketown",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/laketown.mp3",
+        path: "maybe-sometimes-music-dir/laketown.mp3",
       },
       {
         name: "Care",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/care.mp3",
+        path: "maybe-sometimes-music-dir/care.mp3",
       },
       {
         name: "Dark Brown Eyes",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/dark brown eyes.mp3",
+        path: "maybe-sometimes-music-dir/dark brown eyes.mp3",
       },
       {
         name: "Coffee",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/coffee.mp3",
+        path: "maybe-sometimes-music-dir/coffee.mp3",
       },
       {
         name: "True Love Waits",
         artist: "John Le (Originally by Radiohead)",
         image: albumCoverPath,
-        path: "maybe-sometimes/true love waits.mp3",
+        path: "maybe-sometimes-music-dir/true love waits.mp3",
       },
       {
         name: "Better For Me",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/better for me.mp3",
+        path: "maybe-sometimes-music-dir/better for me.mp3",
       },
       {
         name: "Nicole",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/nicole.mp3"
+        path: "maybe-sometimes-music-dir/nicole.mp3"
       },
       {
         name: "Past",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/past.mp3",
+        path: "maybe-sometimes-music-dir/past.mp3",
       },
       {
         name: "I Think You're The Most Wonderful Person To Exist In Time And Space",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/i think you-re the most wonderful person to exist in time and space.mp3",
+        path: "maybe-sometimes-music-dir/i think you-re the most wonderful person to exist in time and space.mp3",
       },
       {
         name: "War Of My Life",
         artist: "John Le (Originally by John Mayer)",
         image: albumCoverPath,
-        path: "maybe-sometimes/war of my life.mp3",
+        path: "maybe-sometimes-music-dir/war of my life.mp3",
       },
       {
         name: 'Better (Fuzzy Analog "I Love You More" Mix)',
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/better (fuzzy analog i love you more mix).mp3",
+        path: "maybe-sometimes-music-dir/better (fuzzy analog i love you more mix).mp3",
       },
       {
         name: "A Story Of DNA",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/a story of dna.mp3",
+        path: "maybe-sometimes-music-dir/a story of dna.mp3",
       },
       {
         name: "Twenty Dollars",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/twenty dollars.mp3",
+        path: "maybe-sometimes-music-dir/twenty dollars.mp3",
       },
       {
         name: "First Place",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/first place.mp3",
+        path: "maybe-sometimes-music-dir/first place.mp3",
       },
       {
         name: "Songs For You",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/songs for you.mp3",
+        path: "maybe-sometimes-music-dir/songs for you.mp3",
       },
       {
         name: 'Better (Middle Of The Night Bathroom Mix)',
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/better (middle of the night bathroom mix).mp3",
+        path: "maybe-sometimes-music-dir/better (middle of the night bathroom mix).mp3",
       },
       {
         name: "All Day",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/all day.mp3",
+        path: "maybe-sometimes-music-dir/all day.mp3",
       },
       {
         name: "Voicemail",
         artist: "John Le",
         image: albumCoverPath,
-        path: "maybe-sometimes/voicemail.mp3",
+        path: "maybe-sometimes-music-dir/voicemail.mp3",
       },
       
       
