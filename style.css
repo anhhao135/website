@@ -52,32 +52,23 @@ table {
 }
 
 
-
-
 body {
 
     background-color: #0d131a;
-		font-family: Inconsolata;
-		color: black;
+	font-family: Inconsolata;
+	color: black;
 
 }
 
 header {
-
-    background-color: #0d131a;
     width: 100%;
     height: auto;
-		text-align: center;
-		color: #111;
-		display:flex;
-		flex-direction: column;
-		justify-content: center;
-		align-content: center;
-
-
-
-
-
+	text-align: center;
+	color: #111;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 header .header-brand{
@@ -88,24 +79,19 @@ header .header-brand{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-		font-weight: bold;
-		width: fit-content;
-		margin: auto;
-
-
+	font-weight: bold;
+	width: fit-content;
+	margin: auto;
 }
 
 header nav{
-
-
-		margin: auto;
-		margin-bottom: 10px;
-		padding: 10px;
-    width: fit-content;
-		background-color: #f7584d;
-		text-align: center;
-
-
+	padding: 10px;
+	width: fit-content;
+	background-color: #f7584d;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 header nav ul li{
@@ -113,25 +99,21 @@ header nav ul li{
     float: center;
     list-style: none;
     padding: 0 16px;
-
-
 }
 
 header nav ul li a{
     font-family: Inconsolata;
     font-size: 16px;
     color: #111;
-
 }
 
 footer{
-		text-align: center;
-		color: white;
-		font-size: 11px;
-		padding: 15px;
-		margin-top: 15px;
+	text-align: center;
+	color: white;
+	font-size: 11px;
+	padding: 15px;
+	margin-top: 10px;
 }
-
 
 #home-picture {
     width:100%;
@@ -141,10 +123,8 @@ footer{
     background-position: center;
     background-size: cover;
     display: block;
-		padding:0;
-		position: relative;
-
-
+	padding:0;
+	position: relative;
 }
 
 
