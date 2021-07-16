@@ -25,7 +25,7 @@
     }
 
     .player {
-      height: 80vh;
+      height: 100%;
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -69,7 +69,7 @@
       text-align: center;
       height: 10vh;
       margin-bottom: 20px;
-      width: 80vw;
+      width: 90vw;
 
     }
 
@@ -174,6 +174,19 @@
       }
 
     }
+
+    @media screen and (max-width: 500px){
+
+      .track-name {
+        font-size: 1.5rem;
+      }
+      .track-artist {
+        font-size: 1rem;
+      }
+
+    }
+
+    
   
 
     
