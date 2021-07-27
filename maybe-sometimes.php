@@ -367,20 +367,6 @@
         image: albumCoverPath,
         path: "maybe-sometimes-music-dir/better (middle of the night bathroom mix).mp3",
       },
-      {
-        name: "All Day",
-        artist: "John Le",
-        image: albumCoverPath,
-        path: "maybe-sometimes-music-dir/all day.mp3",
-      },
-      {
-        name: "Voicemail",
-        artist: "John Le",
-        image: albumCoverPath,
-        path: "maybe-sometimes-music-dir/voicemail.mp3",
-      },
-      
-      
       
     ];
 
