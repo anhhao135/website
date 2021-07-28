@@ -30,7 +30,7 @@
       align-items: center;
       flex-direction: column;
       text-shadow: 1px 1px #000000;
-      background-image: url('maybe-sometimes-music-dir/studio-shot.jpg');
+      background-image: url('maybe-sometimes-music-dir/diana-booklet.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
