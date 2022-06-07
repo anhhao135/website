@@ -41,7 +41,7 @@
 
 <div id = "front_page_image_container">
 
-<img id="front_image" src="art-studies-dir/IMG_1745.JPEG"/>
+<img id="front_image" src="art-dir/emigrate-home-pic.jpg"/>
 
 
 
