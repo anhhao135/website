@@ -119,7 +119,7 @@
 
  #gallery-grid{
  	display: inline-grid;
- 	grid-template-columns: repeat(3, minmax(200px, 1fr));
+ 	grid-template-columns: repeat(4, minmax(200px, 1fr));
  	justify-items: center;
  	align-items: center;
  	width: auto-fit;
@@ -128,10 +128,10 @@
 
  }
 
- @media (max-width: 900px) {
+ @media (max-width: 1000px) {
  		#gallery-grid{
  			display: inline-grid;
- 			grid-template-columns: 1fr;
+ 			grid-template-columns: 1fr 1fr;
  			justify-items: center;
  			align-items: center;
  			width: auto-fit;

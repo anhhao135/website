@@ -165,13 +165,13 @@
        </div>
 
 
-
        <div class="container">
          <img src="art-dir/not-seeing-is-a-flower.jpg" alt="Not Seeing is a Flower" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Not Seeing is a Flower"<br>dried flowers, oil on canvas, 2018</div>
          </div>
        </div>
+
 
        <div class="container">
          <img src="art-dir\synthesize.jpg" alt="Synthesize" class="image" style="width:100%">
@@ -210,6 +210,14 @@
            <div class="text">"Study of Structure II"<br>ink on paper, 2019</div>
          </div>
        </div>
+
+       <div class="container">
+         <img src="art-dir/lisas-mural-with-me.jpg" alt="Lisa's Mural" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">"Lisa's Mural"<br>acrylic on wall, 2022</div>
+         </div>
+       </div>
+
 
        <div class="container">
          <img src="art-dir/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
