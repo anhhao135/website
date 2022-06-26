@@ -129,17 +129,11 @@ a:hover, a:active {
 
  <main style="text-align:center;">
 
-
   <div id="about-container" style = "height:auto;">
-
-    
-
-
-    
 
      <img id ="avatar" src="img/aboutMe/collage.png">
 
-      <div id = "about-text">Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a fourth year electrical engineering student, currently working at <a href="https://www.quartus.com/">Quartus Engineering</a>. I minor in studio arts. If I'm not home tending my garden or fish tanks, I'm probably in my car driving to faraway places to paint. Occasionally, I write songs and play my guitar to get over my overthinking.</I><br><br>Contact me at:<br> anhhao135@gmail.com<br><br><a href="https://github.com/anhhao135/website.git">GitHub</a> for this whole site.<br><br>My <a href="resume.pdf">résumé</a>.<br>
+      <div id = "about-text">Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I'm a fourth year electrical engineering student, currently working at <a href="https://www.quartus.com/">Quartus Engineering</a>. I minor in studio arts. If I'm not home tending my garden or fish tanks, I'm probably in my car driving to faraway places to paint. Occasionally, I write songs and play my guitar to get over my overthinking.<br><br>If you want to see how I made this website, visit its repo on <a href="https://github.com/anhhao135/website.git">GitHub.</a> If you want to find out more on my background, or contact me, take a look at my <a href="resume.pdf">résumé.</a><br>
 
         <nav id="links">
           <li><a href="https://www.linkedin.com/in/hao-le-07b726132/" class="fa fa-linkedin"></a></li>

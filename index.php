@@ -13,12 +13,18 @@
 
     <style>
 
-        #front_page_image_container{
+        #page_container{
             width: 100%;
-            height: 80vh;
+            height: 100vh;
+            background-image: url("art-dir/emigrate.jpg");
+            background-position: center;
+            background-size: cover;
+            display: flex;                  /*  <-------------- required               */
+		    flex-direction: column;         /*  <-------------- required               */
+		    justify-content: center; 
         }
 
-        #front_image{
+        #front_image_dummy{
 
             object-fit: cover;
             width: 100%;
@@ -26,31 +32,46 @@
 
         }
 
+
+        header .header-brand{
+            font-size: 20vw;
+        }
+
+        header nav ul li a{
+            font-size: 30px;
+        }
+
+        header nav{
+            padding: 20px;
+        }
+
+
+
+        @media (max-width: 1000px) {
+
+
+            header nav ul li a{
+                font-size: 15px;
+            }
+
+            header nav{
+                padding: 10px;
+            }
+        
+        }
+
     </style>
 
 
-<body>
+    <body>
 
 
+        <div id = "page_container">
+            <?php include("boilerplate/header.php") ?> 
+        </div>
 
 
-
-<?php include("boilerplate/header.php") ?> 
-
-
-
-<div id = "front_page_image_container">
-
-<img id="front_image" src="art-dir/emigrate-home-pic.jpg"/>
-
-
-
-</div>
-
-
-<?php include("boilerplate/footer.php") ?> 
-
-</body>
+    </body>
 
 
 
