@@ -97,6 +97,9 @@ header nav{
 	padding: 5px;
 	width: fit-content;
 	backdrop-filter: blur(20px) brightness(0.9);
+	-webkit-backdrop-filter: blur(20px) brightness(0.9);
+	-moz-backdrop-filter: blur(20px) brightness(0.9);
+	-ms-backdrop-filter: blur(20px) brightness(0.9);
 	border-radius: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -107,11 +110,11 @@ header nav ul li{
     display: inline-block;
     float: center;
     list-style: none;
-    padding: 0 16px;
+    padding: 0 10px;
 }
 
 header nav ul li a{
-    font-size: 18px;
+    font-size: 16px;
     color: white;
 }
 
