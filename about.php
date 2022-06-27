@@ -5,7 +5,6 @@
     <title>Hao Le | About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <?php include("boilerplate/favicon.php") ?> 
@@ -23,6 +22,7 @@
      row-gap: 30px;
      margin: 20px;
      justify-self:center;
+     line-height: 1.1;
 
 
    }
@@ -61,7 +61,7 @@
   text-decoration: none;
   border-radius: 50%;
   color:white;
-  background-color:#f7584d;
+  background-color:#fcb205;
   display:block;
 }
 
@@ -106,12 +106,6 @@
   }
   
 }
-
-
-input {
-  font-family: Inconsolata;
-}
-
 a:hover, a:active {
   color: #4dcaf7 ;
 }

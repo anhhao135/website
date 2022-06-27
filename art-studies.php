@@ -157,7 +157,7 @@
   <div id="page-container">
 
 
-    <div  style="display:inline-block; background-color:#f7584d; text-align:left; padding: 10px; align-self:start; width:fit-content; justify-self:center; margin-top:20px;">
+    <div  style="display:inline-block; background-color:#fcb205; text-align:left; padding: 10px; align-self:start; width:fit-content; justify-self:center; margin-top:20px;">
 
 
     <nav id="side-nav">

@@ -13,7 +13,6 @@
    @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
     body {
-      font-family: 'Inconsolata', monospace;
 
       /* Smoothly transition the background color */
       transition: background-color .5s;
