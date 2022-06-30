@@ -70,6 +70,7 @@
             height: 100%;
             position: fixed;
             z-index: 0;
+            filter: brightness(0.95);    
         }
 
 
@@ -87,7 +88,7 @@
 
 
             header .header-brand{
-                font-size: 25vw;
+                font-size: 22vw;
             }
         
         }

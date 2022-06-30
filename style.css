@@ -96,10 +96,10 @@ header .header-brand{
 header nav{
 	padding: 5px;
 	width: fit-content;
-	backdrop-filter: blur(20px) brightness(0.9);
-	-webkit-backdrop-filter: blur(20px) brightness(0.9);
-	-moz-backdrop-filter: blur(20px) brightness(0.9);
-	-ms-backdrop-filter: blur(20px) brightness(0.9);
+	backdrop-filter: blur(12px) brightness(0.9);
+	-webkit-backdrop-filter: blur(12px) brightness(0.9);
+	-moz-backdrop-filter: blur(12px) brightness(0.9);
+	-ms-backdrop-filter: blur(12px) brightness(0.9);
 	border-radius: 10px;
 	margin-left: 10px;
 	margin-right: 10px;
