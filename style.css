@@ -102,7 +102,7 @@ header nav{
 	-moz-backdrop-filter: blur(12px) brightness(0.9);
 	-ms-backdrop-filter: blur(12px) brightness(0.9);
 	border-radius: 10px;
-	line-height: 20px;
+	line-height: 25px;
 }
 
 header nav ul li{
