@@ -189,6 +189,33 @@
 
     }
 
+
+
+    .container {
+      display: inline-grid;
+      width: auto;
+      height: 50vh;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 5px;
+      margin-right: 5px;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .image-in-grid{
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
   </style>
 
  <body>
@@ -203,9 +230,18 @@
     </div>
 
 
-    <img id ="avatar" src="music-cover.jpeg">
+    <div class="container">
+      <div align="center;" class="social">
+        <img src="img\aboutMe\DSC00860.jpeg" class="image-in-grid"/>
+      </div>
+
+      <div align="center;" class="social">
+        <img src="img\aboutMe\music-cover.jpeg" class="image-in-grid"/>
+      </div>
+
+    </div>
   
-    <iframe style="height:80vh;" width="80%" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <iframe style="height:80vh;" width="95%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 
   </main>

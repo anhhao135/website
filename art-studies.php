@@ -154,57 +154,64 @@
 
  <main>
 
+    <div style="color:white; width:70%; margin:auto; padding-top: 20px">
+      <p>Stuff that's sort of done but more for my own development.</p>
+    </div>
+
   <div id="page-container">
 
 
     <div  style="display:inline-block; background-color:#fcb205; text-align:left; padding: 10px; align-self:start; width:fit-content; justify-self:center; margin-top:20px;">
 
 
-    <nav id="side-nav">
-       <ul>
-           <li><a href="art.php">WORKS</a></li>
-           <li><a href="art-studies.php" style="font-weight:bold;">STUDIES</a></li>
-       </ul>
-    </nav>
+      <nav id="side-nav">
+        <ul>
+            <li><a href="art.php">WORKS</a></li>
+            <li><a href="art-studies.php" style="font-weight:bold;">STUDIES</a></li>
+        </ul>
+      </nav>
 
 
-  </div>
+    </div>
 
-   <div id="gallery">
-
-     <div id="gallery-grid"> 
+    
 
 
-        <?php
-          $directory = 'art-studies-dir';
 
-          if (!is_dir($directory)) {
-              exit('Invalid diretory path');
-          }
+    <div id="gallery">
 
-          $dir_contents = scandir($directory);
-          shuffle($dir_contents);
+      <div id="gallery-grid"> 
 
-          foreach ($dir_contents as $file) {
-              if ($file !== '.' && $file !== '..') {
-                  
-                //files[] = $file;
 
-                $relative_path = $directory . '/' . $file;
+          <?php
+            $directory = 'art-studies-dir';
 
-                echo '<div class="container"> <img src="' . $relative_path . '" class="image" style="width:100%"> </div>'; //construct image div by iterating through directory
+            if (!is_dir($directory)) {
+                exit('Invalid diretory path');
+            }
 
-              }
-          }
+            $dir_contents = scandir($directory);
+            shuffle($dir_contents);
 
-          //var_dump($files); this will show structured info of the variable
-        ?>
+            foreach ($dir_contents as $file) {
+                if ($file !== '.' && $file !== '..') {
+                    
+                  //files[] = $file;
 
-       </div>
+                  $relative_path = $directory . '/' . $file;
 
-     </div>
-  </div>
+                  echo '<div class="container"> <img src="' . $relative_path . '" class="image" style="width:100%"> </div>'; //construct image div by iterating through directory
 
+                }
+            }
+
+            //var_dump($files); this will show structured info of the variable
+          ?>
+
+        </div>
+
+      </div>
+    </div>
 </div>
 
 
