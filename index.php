@@ -56,6 +56,7 @@
 
         header nav{
             padding: 15px;
+            line-height: 25px;
         }
 
         .fadein { 
@@ -79,7 +80,7 @@
 
 
             header nav ul li a{
-                font-size: 12px;
+                font-size: 20px;
             }
 
             header nav{
