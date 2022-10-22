@@ -79,11 +79,11 @@
 
 
             header nav ul li a{
-                font-size: 15px;
+                font-size: 12px;
             }
 
             header nav{
-                padding: 10px;
+                padding: 8px;
             }
 
 
