@@ -108,6 +108,7 @@
   padding: 5px; 
   box-sizing: border-box;
   text-align: center;
+  height: 500px;
 }
 
 

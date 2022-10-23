@@ -194,18 +194,18 @@
     .container {
       display: inline-grid;
       width: auto;
-      height: 50vh;
+      height: 60vh;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       padding: 40px;
+      row-gap: 10px;
+      column-gap: 10px;
     }
 
     .social {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 5px;
-      margin-right: 5px;
       overflow: hidden;
       height: 100%;
     }
@@ -225,7 +225,7 @@
   
   <main style="display:flex; flex-direction:column; align-items:center; margin-bottom:50px; ">
 
-    <div style="color:white; width:80%; margin:30px;">
+    <div style="color:white; width:80%; margin:10px;">
       <p>Music I make from time to time.</p>
     </div>
 
@@ -239,9 +239,17 @@
         <img src="img\aboutMe\music-cover.jpeg" class="image-in-grid"/>
       </div>
 
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/JMbWZ9hYTEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/0Dg5R40Y8hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      
+
     </div>
+
+    
   
-    <iframe style="height:80vh;" width="95%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <iframe style="height:50vh;" width="95%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 
   </main>
