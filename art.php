@@ -153,6 +153,14 @@
 
      <div id="gallery-grid">
 
+
+       <div class="container">
+         <img src="art-dir/indoor-gathering.png" alt="Indoor Gathering" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">"Indoor Gathering"<br>oil on two canvases, 2022</div>
+         </div>
+       </div>
+
        <div class="container">
          <img src="art-dir/emigrate.jpg" alt="Emigrate" class="image" style="width:100%">
          <div class="middle">
@@ -170,9 +178,9 @@
 
 
        <div class="container">
-         <img src="art-dir\synthesize.jpg" alt="Synthesize" class="image" style="width:100%">
+         <img src="art-dir/lisas-mural-with-me.jpg" alt="Lisa's Mural" class="image" style="width:100%">
          <div class="middle">
-           <div class="text">"Analog"<br>plywood, industrial paint, mounting brackets, wood screws, oil marker, pyrography, duct tape, 2020</div>
+           <div class="text">"Lisa's Mural"<br>acrylic on wall, 2022</div>
          </div>
        </div>
 
@@ -207,18 +215,20 @@
          </div>
        </div>
 
-       <div class="container">
-         <img src="art-dir/lisas-mural-with-me.jpg" alt="Lisa's Mural" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Lisa's Mural"<br>acrylic on wall, 2022</div>
-         </div>
-       </div>
+       
 
 
        <div class="container">
          <img src="art-dir/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Novo Amor"<br>watercolor on paper, 2018</div>
+         </div>
+       </div>
+
+       <div class="container">
+         <img src="art-dir\synthesize.jpg" alt="Synthesize" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">"Analog"<br>plywood, industrial paint, mounting brackets, wood screws, oil marker, pyrography, duct tape, 2020</div>
          </div>
        </div>
 
