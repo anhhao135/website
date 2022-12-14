@@ -36,13 +36,13 @@
   height: 70vh;
   padding: 5px;
   margin-bottom: 5px;
-
+  line-height: 22px;
   grid-template-columns: 5fr 4fr;
   align-items: center;
  }
 
 h1{
-  font-size: 25px;
+  font-size: 21px;
   font-weight: bold;
 } 
 
@@ -84,6 +84,7 @@ h1{
   width:100%;
   height: 450px;
   grid-template-columns: 2fr 5fr;
+  line-height: 22px;
 }
 
 .project-object-type-2{
@@ -91,6 +92,7 @@ h1{
   width:100%;
   height: 450px;
   grid-template-columns: 5fr 2fr;
+  line-height: 22px;
 }
 
 
@@ -166,10 +168,17 @@ h1{
 
 
   <div id="main-body">
+
+
+    <div style="line-height:200%; color:white">
+      <h1>Read the ISOCC 2021 paper that uses my work!</h1?>
+      <h2><a href="hics-paper.pdf">Human-Inspired Camera: A Novel Camera System for Computer Vision</a></h2>
+    </div>
+
     <div id ="project-object">
        <div class="project_text">
          <div>
-            <h1 style="font-size: 24px">Unity3D Game Engine as a Versatile Synthetic Data Generation Platform</h1>
+            <h1 style="font-size: 22px">Unity3D Game Engine as a Versatile Synthetic Data Generation Platform</h1>
             <hr>
             <p>One of the heaviest impacting factors on resources when developing Advanced Driver Assistance Systems is the process of real data collection. A fully-equipped data rig must be deployed on streets for extended periods; this proves to be expensive in areas of hardware maintenance, data post-processing, and manual annotation subject to human error. Moreover, diversity is constrained to geography - in other words, there is only so much that can be captured within the 24 hours of a day.</p>
             <br>

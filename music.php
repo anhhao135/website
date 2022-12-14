@@ -225,9 +225,12 @@
   
   <main style="display:flex; flex-direction:column; align-items:center; margin-bottom:50px; ">
 
-    <div style="color:white; width:80%; margin:10px;">
+    <div style="color:white; width:80%; margin:20px;">
       <p>Music I make from time to time.</p>
     </div>
+
+
+    <iframe style="height:50vh;" width="95%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 
     <div class="container">
@@ -249,7 +252,7 @@
 
     
   
-    <iframe style="height:50vh;" width="95%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    
 
 
   </main>

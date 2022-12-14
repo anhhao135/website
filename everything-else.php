@@ -112,12 +112,6 @@
 }
 
 
-
-
-
-}
-
-
 .fade-text{
   opacity:0;
 }
@@ -186,16 +180,21 @@ text-align: center;
 
 
 
-          
+        <div class="social">
+            <img src="ECE164_Project\cover.png" class="image-in-grid"/>
+            <div class="middle">
+              <a href="op-amp-design.php">180nm CMOS Op-Amp Design</a>
+            </div>
+        </div>  
         
-        <div align="center;" class="social">
+        <div class="social">
             <img src="img\synthetic_collage.png" class="image-in-grid"/>
             <div class="middle">
               <a href="synthetic-data-research.php">Synthetic Data Research</a>
             </div>
         </div>
         
-        <div align="center;" class="social">
+        <div class="social">
             <img src="img\hao-ca-beat-it.png" class="image-in-grid"/>
             <div class="middle">
               <a href="https://youtube.com/404anhhao">My YouTube Channel</a>
