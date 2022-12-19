@@ -89,12 +89,20 @@
 
 
 .container {
-  width: 90%;
+  width: 95%; 
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: stretch;
+}
+
+.container-back{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social {
@@ -108,7 +116,7 @@
   padding: 5px; 
   box-sizing: border-box;
   text-align: center;
-  height: 500px;
+  height: 600px;
 }
 
 
@@ -118,8 +126,8 @@
 
 .image-in-grid{
   width: 100%;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100%;  
+  height: 100%;
   object-fit: cover;
 }
 
@@ -151,18 +159,24 @@ a:hover, a:active {
 
 @media (max-width: 700px) {
 
-.social {
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+  .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
-flex: 1 1 calc(100% / 1);
-/*Start Run Code Snippet output CSS*/
-padding: 5px; 
-box-sizing: border-box;
-text-align: center;
-}
+    flex: 1 1 calc(100% / 1);
+    /*Start Run Code Snippet output CSS*/
+    padding: 5px; 
+    box-sizing: border-box;
+    text-align: center;
+
+    height: 400px;
+  }
+
+  .container-back{
+    height: auto;
+  }
 
 }
 
@@ -174,33 +188,31 @@ text-align: center;
 
   <main style="text-align:center;">
 
+        <div class="container-back">
+          <div class="container">
 
-        <div class="container">
-
-
-
-
-        <div class="social">
-            <img src="ECE164_Project\cover.png" class="image-in-grid"/>
-            <div class="middle">
-              <a href="op-amp-design.php">180nm CMOS Op-Amp Design</a>
+            <div class="social">
+                <img src="ECE164_Project\cover.png" class="image-in-grid"/>
+                <div class="middle">
+                  <a href="op-amp-design.php">180nm CMOS Op-Amp Design</a>
+                </div>
+            </div>  
+            
+            <div class="social">
+                <img src="img\synthetic_collage.png" class="image-in-grid"/>
+                <div class="middle">
+                  <a href="synthetic-data-research.php">Synthetic Data Research</a>
+                </div>
             </div>
-        </div>  
-        
-        <div class="social">
-            <img src="img\synthetic_collage.png" class="image-in-grid"/>
-            <div class="middle">
-              <a href="synthetic-data-research.php">Synthetic Data Research</a>
+            
+            <div class="social">
+                <img src="img\hao-ca-beat-it.png" class="image-in-grid"/>
+                <div class="middle">
+                  <a href="https://youtube.com/404anhhao">My YouTube Channel</a>
+                </div>
             </div>
-        </div>
-        
-        <div class="social">
-            <img src="img\hao-ca-beat-it.png" class="image-in-grid"/>
-            <div class="middle">
-              <a href="https://youtube.com/404anhhao">My YouTube Channel</a>
-            </div>
-        </div>
 
+          </div>
         </div>
 
   </main>

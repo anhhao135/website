@@ -256,7 +256,8 @@
 
 
   </main>
-
+  
+  <?php include("boilerplate/footer.php") ?>
 </body>
 
 </html>
