@@ -18,7 +18,7 @@
      grid-template-columns: 1fr;
      justify-items: center;
      align-items: center;
-     width: 80%;
+     width: 95%;
      row-gap: 30px;
      margin: 20px;
      justify-self:center;
