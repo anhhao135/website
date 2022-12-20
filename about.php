@@ -18,9 +18,11 @@
      grid-template-columns: 1fr;
      justify-items: center;
      align-items: center;
-     width: 95%;
+     width: 96%;
      row-gap: 30px;
-     margin: 20px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 20px;
      justify-self:center;
      line-height: 1.1;
 
@@ -144,19 +146,19 @@ a:hover, a:active {
 
   <main style="text-align:center;">
 
-    <div id="about-container" style = "height:auto;">
+    <div id="about-container">
 
 
         <div class="container">
-          <div align="center;" class="social">
+          <div class="social">
             <img src="img/aboutMe/hike.jpeg" class="image-in-grid"/>
           </div>
 
-          <div align="center;" class="social">
+          <div class="social">
             <img src="img/aboutMe/guitar.JPEG" class="image-in-grid"/>
           </div>
 
-          <div align="center;" class="social">
+          <div class="social">
             <img src="img/aboutMe/paint.JPEG" class="image-in-grid"/>
           </div>
         </div>
