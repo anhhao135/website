@@ -197,7 +197,7 @@
       height: 60vh;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 40px;
+      padding: 10px;
       row-gap: 10px;
       column-gap: 10px;
     }
@@ -230,15 +230,15 @@
     </div>
 
 
-    <iframe style="height:50vh;" width="95%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <iframe style="height:50vh;" width="100%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 
     <div class="container">
-      <div align="center;" class="social">
+      <div class="social">
         <img src="img\aboutMe\DSC00860.jpeg" class="image-in-grid"/>
       </div>
 
-      <div align="center;" class="social">
+      <div class="social">
         <img src="img\aboutMe\music-cover.jpeg" class="image-in-grid"/>
       </div>
 

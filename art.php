@@ -57,7 +57,7 @@
      display: inline-grid;
      grid-template-columns: 1.2fr 9fr;
      width: auto;
-     margin:5px;
+     margin-top:20px;
 
    }
 
@@ -117,6 +117,7 @@
      display:block;
      vertical-align: middle;
      text-align: center;
+     
    }
 
  }
@@ -136,7 +137,7 @@
   <div id="page-container">
 
 
-    <div  style="display:inline-block; background-color:#fcb205; text-align:left; padding: 10px ; align-self:start; width:fit-content; justify-self:center; margin-top:20px;">
+    <div  style="display:inline-block; background-color:#fcb205; text-align:left; padding: 10px ; align-self:start; width:fit-content; justify-self:center; margin:20px;">
 
 
     <nav id="side-nav">
