@@ -4,7 +4,8 @@ from PIL import Image
 
 Copyright = "Paresh Sawant"  # add name of copyright holder
 Artist = "Paresh Sawant"  # add name of attist
-quality = 15
+quality = 50
+scale = 0.5
 
 
 def get_images(path):
@@ -43,6 +44,8 @@ def compress_image(imagefiles):
         try:
             # image_path = path + '/' + image
             im = Image.open(image_path)
+            width, height = im.size
+            im= im.resize((int(width*scale), int(height*scale)), Image.ANTIALIAS)
 
             try:
                 exif_dict = modify_exif(piexif.load(im.info["exif"]))
