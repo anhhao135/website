@@ -4,7 +4,7 @@ from PIL import Image
 
 Copyright = "Paresh Sawant"  # add name of copyright holder
 Artist = "Paresh Sawant"  # add name of attist
-quality = 30
+quality = 15
 
 
 def get_images(path):
