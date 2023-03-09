@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+
+
 <html>
 
-<div>
+    <div>
+        <?php
+            $year = date("Y");
+            print "<footer>Hao Le, {$year}. Thanks for stopping by!</footer>"
+        ?>
 
-<footer>Hao Le, 2022. Thanks for stopping by!</footer>
-
-</div>
+    </div>
 
 
 </html>
