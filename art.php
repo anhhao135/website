@@ -155,17 +155,26 @@
      <div id="gallery-grid">
 
 
-       <div class="container">
-         <img src="art-dir/indoor-gathering.png" alt="Indoor Gathering" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Indoor Gathering"<br>oil on two canvases, 2022</div>
-         </div>
-       </div>
+       
 
        <div class="container">
          <img src="art-dir/emigrate.jpg" alt="Emigrate" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Emigrate"<br>oil on canvas, 2021</div>
+         </div>
+       </div>
+
+       <div class="container">
+         <img src="art-dir/half-dome.jpg" alt="Half Dome" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">"Half Dome"<br>oil on canvas, 2023</div>
+         </div>
+       </div>
+
+       <div class="container">
+         <img src="art-dir/indoor-gathering.png" alt="Indoor Gathering" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">"Indoor Gathering"<br>oil on two canvases, 2022</div>
          </div>
        </div>
 
