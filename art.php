@@ -52,6 +52,20 @@
    line-height: 1.2;
  }
 
+
+ #side-nav-container{
+  display:inline-block;
+  background-color:#e3b578;
+  text-align:left;
+  padding: 25px; 
+  align-self:start;
+  width:fit-content;
+  justify-self:center;
+  margin:20px;
+  font-size: 30px;
+ }
+
+
    #page-container{
 
      display: inline-grid;
@@ -85,15 +99,11 @@
 
 
    @media (max-width: 900px) {
-   		#side-nav ul li a{
-        font-size:13px;
-   	}
 
-    #side-nav ul li{
-
-      display:block;
-      padding:0px;
-   }
+    #side-nav-container{
+      font-size: 20px;
+      padding: 15px;
+    }
 
 
    #page-container{
@@ -104,7 +114,7 @@
 
  }
 
- @media (max-width: 550px) {
+ @media (max-width: 700px) {
 
    #page-container{
 
@@ -114,10 +124,16 @@
 
    #side-nav ul li{
 
-     display:block;
+     display:inline;
      vertical-align: middle;
      text-align: center;
      
+   }
+
+   #page-container{
+
+     margin-top:0px;
+
    }
 
  }
@@ -137,18 +153,14 @@
   <div id="page-container">
 
 
-    <div  style="display:inline-block; background-color:#fcb205; text-align:left; padding: 10px ; align-self:start; width:fit-content; justify-self:center; margin:20px;">
-
-
-    <nav id="side-nav">
-       <ul>
-           <li><a href="art.php" style="font-weight: bold">WORKS</a></li>
-           <li><a href="art-studies.php">STUDIES</a></li>
-       </ul>
-    </nav>
-
-
-  </div>
+    <div id="side-nav-container">
+      <nav id="side-nav">
+        <ul>
+            <li><a href="art.php" style="font-weight:bold; color:#4CAF50;">WORKS</a></li>
+            <li><a href="art-studies.php">STUDIES</a></li>
+        </ul>
+      </nav>
+    </div>
 
    <div id="gallery">
 
@@ -232,13 +244,6 @@
          <img src="art-dir/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Novo Amor"<br>watercolor on paper, 2018</div>
-         </div>
-       </div>
-
-       <div class="container">
-         <img src="art-dir\synthesize.jpg" alt="Synthesize" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Analog"<br>plywood, industrial paint, mounting brackets, wood screws, oil marker, pyrography, duct tape, 2020</div>
          </div>
        </div>
 

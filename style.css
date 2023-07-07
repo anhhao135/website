@@ -39,7 +39,7 @@ body {
 }
 
 a {
-	color: #fcb205;
+	color: #e3b578;
 }
 ol, ul {
 	list-style: none;
@@ -64,7 +64,7 @@ table {
 
 body {
 
-    background-color: #3682d1;
+    background-color: #3a648c;
 	color: black;
 
 }
@@ -83,7 +83,7 @@ header {
 
 header .header-brand{
 
-    font-size: 50px;
+    font-size: 60px;
     color:  white;
     text-align: center;
     padding-top: 20px;
@@ -113,7 +113,7 @@ header nav ul li{
 }
 
 header nav ul li a{
-    font-size: 15px;
+    font-size: 20px;
     color: white;
 }
 

@@ -45,6 +45,18 @@
    padding: 16px 32px;
  }
 
+ #side-nav-container{
+  display:inline-block;
+  background-color:#e3b578;
+  text-align:left;
+  padding: 25px; 
+  align-self:start;
+  width:fit-content;
+  justify-self:center;
+  margin:20px;
+  font-size: 30px;
+ }
+
    #page-container{
 
      display: inline-grid;
@@ -77,41 +89,45 @@
    }
 
 
-   @media (max-width: 900px) {
-   		#side-nav ul li a{
-        font-size:13px;
-   	}
+@media (max-width: 900px) {
 
-    #side-nav ul li{
-
-      display:block;
-      padding:0px;
-   }
+#side-nav-container{
+  font-size: 20px;
+  padding: 15px;
+}
 
 
-   #page-container{
+#page-container{
 
-     grid-template-columns: 2fr 9fr;
+ grid-template-columns: 2fr 9fr;
 
-   }
+}
 
- }
+}
 
- @media (max-width: 550px) {
+@media (max-width: 700px) {
 
-   #page-container{
+#page-container{
 
-     grid-template-columns: 1fr;
+ grid-template-columns: 1fr;
 
-   }
+}
 
-   #side-nav ul li{
+#side-nav ul li{
 
-     display:block;
-     vertical-align: middle;
-     text-align: center;
-   }
- }
+ display:inline;
+ vertical-align: middle;
+ text-align: center;
+ 
+}
+
+#page-container{
+
+ margin-top:0px;
+
+}
+
+}
 
 
  #gallery-grid{
@@ -125,7 +141,7 @@
 
  }
 
- @media (max-width: 1000px) {
+ @media (max-width: 1200px) {
  		#gallery-grid{
  			display: inline-grid;
  			grid-template-columns: 1fr 1fr;
@@ -150,30 +166,16 @@
 
 
  <main>
-
-    <div style="color:white; width:70%; margin:auto; padding-top: 20px">
-      <p>Stuff that's sort of done but more for my own development.</p>
-    </div>
-
   <div id="page-container">
 
-
-    <div  style="display:inline-block; background-color:#fcb205; text-align:left; padding: 10px; align-self:start; width:fit-content; justify-self:center; margin:20px;">
-
-
+    <div id="side-nav-container">
       <nav id="side-nav">
         <ul>
             <li><a href="art.php">WORKS</a></li>
-            <li><a href="art-studies.php" style="font-weight:bold;">STUDIES</a></li>
+            <li><a href="art-studies.php" style="font-weight:bold; color:#4CAF50">STUDIES</a></li>
         </ul>
       </nav>
-
-
     </div>
-
-    
-
-
 
     <div id="gallery">
 

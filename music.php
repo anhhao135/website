@@ -193,13 +193,13 @@
 
     .container {
       display: inline-grid;
-      width: auto;
-      height: 60vh;
+      width:  90%;
+      height: 70vh;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      padding: 10px;
-      row-gap: 10px;
-      column-gap: 10px;
+      padding: 20px;
+      row-gap: 20px;
+      column-gap: 20px;
     }
 
     .social {
@@ -223,14 +223,14 @@
   <?php include("boilerplate/header.php") ?> 
 
   
-  <main style="display:flex; flex-direction:column; align-items:center; margin-bottom:50px; ">
+  <main style="display:flex; flex-direction:column; align-items:center; margin-bottom:5px; ">
 
     <div style="color:white; width:80%; margin:20px;">
       <p>Music I make from time to time.</p>
     </div>
 
 
-    <iframe style="height:50vh;" width="100%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+    <iframe style="height:50vh;" width="90%" scrolling="yes" frameborder="yes" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/125148176&color=%23f7584d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 
     <div class="container">
@@ -241,13 +241,6 @@
       <div class="social">
         <img src="img\aboutMe\music-cover.jpeg" class="image-in-grid"/>
       </div>
-
-      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/JMbWZ9hYTEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/0Dg5R40Y8hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-      
-
     </div>
 
     

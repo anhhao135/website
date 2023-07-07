@@ -6,7 +6,7 @@
 
  <head>
     <meta charset="utf-8">
-    <title>Hao Le | Research</title>
+    <title>Hao Le | 180nm CMOS Op-Amp Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">

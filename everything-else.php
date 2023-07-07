@@ -2,7 +2,7 @@
 <html>
  <head>
     <meta charset="utf-8">
-    <title>Hao Le | About</title>
+    <title>Hao Le | Everything Else</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -206,7 +206,7 @@ a:hover, a:active {
             </div>
             
             <div class="social">
-                <img src="img\hao-ca-beat-it.png" class="image-in-grid"/>
+                <img src="img\aboutMe\guitar.JPEG" class="image-in-grid"/>
                 <div class="middle">
                   <a href="https://youtube.com/404anhhao">My YouTube Channel</a>
                 </div>
