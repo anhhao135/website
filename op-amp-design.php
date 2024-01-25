@@ -181,12 +181,12 @@ h1{
             <br>
             <p>The circuit combines a folded cascode and common source amplifier stage to realize high overall gain. Moreover, margin performance was tunable with a compensation resistor and capacitor. Lastly, all MOSFETs were biased with a constant-transconductance reference circuit whose output current was mirrored downstream. Gate voltages were biased with ratiometrically with stacked MOSFET arrangements. Design performance was verified in Cadence Virtuoso. </p>
             <br>
-            <p>Six groups were chosen out of roughly 50 to present their designs in front of a panel of Apple engineers. I was awarded the 2nd place prize! Though my performance was not the absolute best, the judges saw merit in my design methodology.</p>
+            <p>Six groups were chosen out of roughly 50 to present their designs in front of a panel of Apple engineers. I was awarded the 2nd place prize: an Apple Watch! Though my performance was not the absolute best, the judges saw merit in my design methodology. Thanks, Apple!</p>
           </div>
        </div>
 
        <div class="project_image">
-         <img src="ECE164_Project\cover.png" style="flex-shrink:0; height:100%; width: 100%; object-fit: cover; max-height: 600px"/>
+         <img src="ECE164_Project\my_apple_watch.JPG" style="flex-shrink:0; height:100%; width: 100%; object-fit: cover; max-height: 600px"/>
        </div>
     </div>
 

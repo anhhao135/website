@@ -177,6 +177,13 @@
        </div>
 
        <div class="container">
+         <img src="art-dir/untitled_2023.png" alt="Untitled" class="image" style="width:100%">
+         <div class="middle">
+           <div class="text">"Untitled"<br>oil on canvas, 2023</div>
+         </div>
+       </div>
+
+       <div class="container">
          <img src="art-dir/half-dome.jpg" alt="Half Dome" class="image" style="width:100%">
          <div class="middle">
            <div class="text">"Half Dome"<br>oil on canvas, 2023</div>
