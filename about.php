@@ -138,6 +138,12 @@
 
     <div id="about-container">
 
+        <div class="container">
+          <div class="social">
+            <img src="img/aboutMe/plein-air.jpg" class="image-in-grid"/>
+          </div>
+        </div>
+
         <div id = "about-text">
 
              Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I am currently a master's student at <a href="https://www.ece.ucsd.edu/">UC San Diego's electrical engineering department</a> - this is also where I obtained my bachelor's plus a minor in studio arts! I keep myself busy as a researcher at the <a href="http://iebl.ucsd.edu/">Integrated Electronics and Biointerfaces Lab</a> supervised by Dr. Shadi Dayeh. My last industry occupation was at <a href="https://www.quartus.com/">Quartus Engineering</a>. If I'm not home playing guitar, tending my garden, admiring my tarantulas, or decorating fish tanks, I'm probably somewhere really far away with my portable easle, painting nature in front of me.<br><br>If you want to see how I made this website (hosted on a Raspberry Pi underneath my couch), visit its repo on <a href="https://github.com/anhhao135/website.git">GitHub.</a> If you want to find out more on my background, or contact me, take a look at my <a href="resume.pdf">résumé</a> or connect with me on <a href="https://www.linkedin.com/in/hao-le-07b726132/">LinkedIn.</a>
@@ -145,11 +151,7 @@
         </div>
 
 
-        <div class="container">
-          <div class="social">
-            <img src="img/aboutMe/studio.jpg" class="image-in-grid"/>
-          </div>
-        </div>
+        
 
         
 
