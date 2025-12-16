@@ -10,7 +10,7 @@ require_once __DIR__ . '/sync_images.php';
 sync_images(
     $originals_dir,
     $compressed_dir,
-    25
+    15
 );
 
 ?>
