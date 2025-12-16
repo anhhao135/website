@@ -1,3 +1,36 @@
+<?php
+
+$directory = 'art/works';
+$originals_dir = __DIR__ . '/' . $directory . '/originals';
+$compressed_dir = __DIR__ . '/' . $directory . '/compressed';
+
+require_once __DIR__ . '/sync_images.php';
+
+sync_images(
+    $originals_dir,
+    $compressed_dir,
+    50
+);
+
+// URL path for images (THIS is what the browser uses)
+$artDir = '/' . $directory . '/compressed';
+
+$works = [
+    ['file' => 'emigrate.jpg', 'alt' => 'Emigrate', 'text' => '"Emigrate"<br>oil on canvas, 2021'],
+    ['file' => 'untitled_2023.png', 'alt' => 'Untitled', 'text' => '"Untitled"<br>oil on canvas, 2023'],
+    ['file' => 'half-dome.jpg', 'alt' => 'Half Dome', 'text' => '"Half Dome"<br>oil on canvas, 2023'],
+    ['file' => 'indoor-gathering.png', 'alt' => 'Indoor Gathering', 'text' => '"Indoor Gathering"<br>oil on two canvases, 2022'],
+    ['file' => 'not-seeing-is-a-flower.jpg', 'alt' => 'Not Seeing is a Flower', 'text' => '"Not Seeing is a Flower"<br>dried flowers, oil on canvas, 2018'],
+    ['file' => 'lisas-mural-with-me.jpg', 'alt' => "Lisa's Mural", 'text' => '"Lisa\'s Mural"<br>acrylic on wall, 2022'],
+    ['file' => 'pixels.jpg', 'alt' => 'Interpolation', 'text' => '"Compressed"<br>graphite on paper, 2020'],
+    ['file' => 'self-portrait-in-garden.jpg', 'alt' => 'Self-portrait in Garden', 'text' => '"Self-portrait in Garden"<br>gold leaf, oil on canvas, 2019'],
+    ['file' => 'study-of-structure-1.jpg', 'alt' => 'Study of Structure 1', 'text' => '"Study of Structure I"<br>ink on paper, 2019'],
+    ['file' => 'study-of-structure-2.jpg', 'alt' => 'Study of Structure 2', 'text' => '"Study of Structure II"<br>ink on paper, 2019'],
+    ['file' => 'novo-amor.jpg', 'alt' => 'Novo Amor', 'text' => '"Novo Amor"<br>watercolor on paper, 2018'],
+];
+
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -52,7 +85,6 @@
    line-height: 1.2;
  }
 
-
  #side-nav-container{
   display:inline-block;
   background-color:#e3b578;
@@ -65,93 +97,58 @@
   font-size: 30px;
  }
 
+ #page-container{
+   display: inline-grid;
+   grid-template-columns: 1.2fr 9fr;
+   width: auto;
+   margin-top:20px;
+ }
 
-   #page-container{
+ #side-nav ul li a{
+   color:white;
+ }
 
-     display: inline-grid;
-     grid-template-columns: 1.2fr 9fr;
-     width: auto;
-     margin-top:20px;
+ #side-nav ul li{
+   display:block;
+   padding:5px;
+ }
 
-   }
+ #side-nav{
+   display:block;
+ }
 
-   #side-nav ul li a{
-
-     color:white;
-
-
-   }
-
-   #side-nav ul li{
-
-     display:block;
-     padding:5px;
-
-
-
-   }
-
-   #side-nav{
-
-     display:block;
-
-   }
-
-
-   @media (max-width: 900px) {
-
-    #side-nav-container{
-      font-size: 20px;
-      padding: 15px;
-    }
-
-
-   #page-container{
-
-     grid-template-columns: 2fr 9fr;
-
-   }
-
+ @media (max-width: 900px) {
+  #side-nav-container{
+    font-size: 20px;
+    padding: 15px;
+  }
+  #page-container{
+    grid-template-columns: 2fr 9fr;
+  }
  }
 
  @media (max-width: 700px) {
-
-   #page-container{
-
-     grid-template-columns: 1fr;
-
-   }
-
-   #side-nav ul li{
-
-     display:inline;
-     vertical-align: middle;
-     text-align: center;
-     
-   }
-
-   #page-container{
-
-     margin-top:0px;
-
-   }
-
+  #page-container{
+    grid-template-columns: 1fr;
+  }
+  #side-nav ul li{
+    display:inline;
+    vertical-align: middle;
+    text-align: center;
+  }
+  #page-container{
+    margin-top:0px;
+  }
  }
-
-
  </style>
 
  <body>
 
  <?php include("boilerplate/header.php") ?> 
 
-
-
-
  <main>
 
   <div id="page-container">
-
 
     <div id="side-nav-container">
       <nav id="side-nav">
@@ -162,123 +159,29 @@
       </nav>
     </div>
 
-   <div id="gallery">
+    <div id="gallery">
+      <div id="gallery-grid">
 
-     <div id="gallery-grid">
+        <?php foreach ($works as $work): ?>
+          <div class="container">
+            <img src="<?= htmlspecialchars($artDir . '/' . $work['file']) ?>"
+                 alt="<?= htmlspecialchars($work['alt']) ?>"
+                 class="image"
+                 style="width:100%">
+            <div class="middle">
+              <div class="text"><?= $work['text'] ?></div>
+            </div>
+          </div>
+        <?php endforeach; ?>
 
+      </div>
+    </div>
 
-       
-
-       <div class="container">
-         <img src="art-dir/emigrate.jpg" alt="Emigrate" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Emigrate"<br>oil on canvas, 2021</div>
-         </div>
-       </div>
-
-       <div class="container">
-         <img src="art-dir/untitled_2023.png" alt="Untitled" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Untitled"<br>oil on canvas, 2023</div>
-         </div>
-       </div>
-
-       <div class="container">
-         <img src="art-dir/half-dome.jpg" alt="Half Dome" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Half Dome"<br>oil on canvas, 2023</div>
-         </div>
-       </div>
-
-       <div class="container">
-         <img src="art-dir/indoor-gathering.png" alt="Indoor Gathering" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Indoor Gathering"<br>oil on two canvases, 2022</div>
-         </div>
-       </div>
-
-
-       <div class="container">
-         <img src="art-dir/not-seeing-is-a-flower.jpg" alt="Not Seeing is a Flower" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Not Seeing is a Flower"<br>dried flowers, oil on canvas, 2018</div>
-         </div>
-       </div>
-
-
-       <div class="container">
-         <img src="art-dir/lisas-mural-with-me.jpg" alt="Lisa's Mural" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Lisa's Mural"<br>acrylic on wall, 2022</div>
-         </div>
-       </div>
-
-
-       <div class="container">
-         <img src="art-dir\pixels.jpg" alt="Interpolation" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Compressed"<br>graphite on paper, 2020</div>
-         </div>
-       </div>
-
-
-       <div class="container">
-         <img src="art-dir/self-portrait-in-garden.jpg" alt="Self-portrait in Garden" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Self-portrait in Garden"<br>gold leaf, oil on canvas, 2019</div>
-         </div>
-       </div>
-
-       <div class="container">
-         <img src="art-dir/study-of-structure-1.jpg" alt="Study of Structure 1" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Study of Structure I"<br>ink on paper, 2019</div>
-         </div>
-       </div>
-
-
-       <div class="container">
-         <img src="art-dir/study-of-structure-2.jpg" alt="Study of Structure 2" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Study of Structure II"<br>ink on paper, 2019</div>
-         </div>
-       </div>
-
-       
-
-
-       <div class="container">
-         <img src="art-dir/novo-amor.jpg" alt="Novo Amor" class="image" style="width:100%">
-         <div class="middle">
-           <div class="text">"Novo Amor"<br>watercolor on paper, 2018</div>
-         </div>
-       </div>
-
-
-
-
-
-
-     </div>
   </div>
 
-</div>
+ </main>
 
-
-
-
-
-</main>
-
-
-
-
-
-
-
-<?php include("boilerplate/footer.php") ?> 
+ <?php include("boilerplate/footer.php") ?> 
 
  </body>
-
-
 </html>

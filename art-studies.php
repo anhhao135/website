@@ -1,4 +1,24 @@
-﻿<!DOCTYPE html>
+﻿<?php
+
+$directory = 'art/studies';
+$originals_dir = __DIR__ . '/' . $directory . '/originals';
+$compressed_dir = __DIR__ . '/' . $directory . '/compressed';
+
+
+require_once __DIR__ . '/sync_images.php';
+
+sync_images(
+    $originals_dir,
+    $compressed_dir,
+    25
+);
+
+?>
+
+
+
+
+<!DOCTYPE html>
 <html>
  <head>
     <meta charset="utf-8">
@@ -182,30 +202,29 @@
       <div id="gallery-grid"> 
 
 
-          <?php
-            $directory = 'art-studies-dir';
+        <?php
+        $fs_directory  = $compressed_dir;                  // filesystem path
+        $url_directory = '/' . $directory . '/compressed'; // URL path
 
-            if (!is_dir($directory)) {
-                exit('Invalid diretory path');
-            }
+        $allowed_ext = ['jpg', 'jpeg', 'png', 'webp'];
 
-            $dir_contents = scandir($directory);
-            shuffle($dir_contents);
+        $dir_contents = scandir($fs_directory);
+        shuffle($dir_contents);
 
-            foreach ($dir_contents as $file) {
-                if ($file !== '.' && $file !== '..') {
-                    
-                  //files[] = $file;
+        foreach ($dir_contents as $file) {
+            if ($file === '.' || $file === '..') continue;
 
-                  $relative_path = $directory . '/' . $file;
+            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+            if (!in_array($ext, $allowed_ext, true)) continue;
 
-                  echo '<div class="container"> <img src="' . $relative_path . '" class="image" style="width:100%"> </div>'; //construct image div by iterating through directory
+            $img_url = $url_directory . '/' . $file;
 
-                }
-            }
+            echo '<div class="container">';
+            echo '<img src="' . htmlspecialchars($img_url) . '" class="image" style="width:100%">';
+            echo '</div>';
+        }
+        ?>
 
-            //var_dump($files); this will show structured info of the variable
-          ?>
 
         </div>
 
