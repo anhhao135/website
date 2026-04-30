@@ -3,6 +3,7 @@ require_once __DIR__ . '/includes/gallery.php';
 
 $config   = ['title' => 'HAO LE', 'desc' => 'Hao Le — Art, Engineering, Music', 'active' => '', 'dark_header' => true];
 $featured    = scan_images(__DIR__ . '/images/art/featured');
+shuffle($featured);
 $total       = max(1, count($featured));
 $le_fill_url = !empty($featured)
     ? thumb_url('images/art/featured/' . $featured[array_rand($featured)], 1200, 88)
@@ -30,6 +31,7 @@ require __DIR__ . '/includes/head.php';
           $src   = 'images/art/featured/' . $file;
       ?>
         <div class="slide<?= $i === 0 ? ' active' : '' ?>" style="--slide-bg: #111">
+          <div class="slide-blur" style="background-image:url('<?= thumb_data_uri(__DIR__ . '/' . $src) ?>')"></div>
           <img src="<?= htmlspecialchars(thumb_url($src, 1920, 88)) ?>"
                alt="<?= htmlspecialchars($title) ?>">
           <div class="slide-caption">
@@ -49,10 +51,14 @@ require __DIR__ . '/includes/head.php';
                   aria-label="Slide <?= $i + 1 ?>"></button>
         <?php endforeach; ?>
       </div>
-      <div class="slide-counter">
-        <span class="slide-current">01</span>
-        <span class="slide-sep">/</span>
-        <span class="slide-total"><?= str_pad($total, 2, '0', STR_PAD_LEFT) ?></span>
+      <div class="slide-arrows">
+        <button class="slide-arrow slide-prev" aria-label="Previous slide">&#8592;</button>
+        <div class="slide-counter">
+          <span class="slide-current">01</span>
+          <span class="slide-sep">/</span>
+          <span class="slide-total"><?= str_pad($total, 2, '0', STR_PAD_LEFT) ?></span>
+        </div>
+        <button class="slide-arrow slide-next" aria-label="Next slide">&#8594;</button>
       </div>
     </div>
   </section>

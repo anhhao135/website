@@ -66,13 +66,6 @@ require __DIR__ . '/includes/head.php';
           <div class="pd-spec"><span class="pd-spec-val">180 nm</span><span class="pd-spec-key">CMOS node</span></div>
           <div class="pd-spec"><span class="pd-spec-val">2nd place</span><span class="pd-spec-key">Apple panel</span></div>
         </div>
-        <div class="project-tags" style="margin-top:24px">
-          <span class="tag">Analog Design</span>
-          <span class="tag">CMOS</span>
-          <span class="tag">Cadence Virtuoso</span>
-          <span class="tag">Folded Cascode</span>
-          <span class="tag">ECE 164 · UCSD</span>
-        </div>
       </div>
 
     </div>

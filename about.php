@@ -34,7 +34,7 @@ require __DIR__ . '/includes/head.php';
             </p>
             <p>
               I am currently an electrical engineer at
-              <a href="https://quartus.com/" target="_blank" rel="noopener" class="inline-link">Quartus Engineering.</a>
+              <a href="https://www.serranosystems.com/" target="_blank" rel="noopener" class="inline-link">Serrano Systems.</a>
               I got my B.S. and M.S. degrees from UC San Diego, where I was a researcher
               at the <a href="http://iebl.ucsd.edu/" target="_blank" rel="noopener" class="inline-link">Integrated Electronics and Biointerfaces Lab</a>
               supervised by Dr. Shadi Dayeh.
@@ -49,7 +49,7 @@ require __DIR__ . '/includes/head.php';
           <div class="about-meta">
             <div class="about-meta-row">
               <span class="about-meta-label">Currently</span>
-              <span>Electrical Engineer, Quartus Engineering</span>
+              <span>Electrical Engineer, Serrano Systems</span>
             </div>
             <div class="about-meta-row">
               <span class="about-meta-label">Education</span>

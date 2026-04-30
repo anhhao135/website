@@ -156,19 +156,6 @@ require __DIR__ . '/includes/head.php';
         </div>
       </div>
 
-      <!-- Tags -->
-      <div class="pd-specs reveal">
-        <div class="project-tags">
-          <span class="tag">Unity3D</span>
-          <span class="tag">C#</span>
-          <span class="tag">Computer Vision</span>
-          <span class="tag">ADAS</span>
-          <span class="tag">Point Clouds</span>
-          <span class="tag">V2X</span>
-          <span class="tag">IEBL · UCSD</span>
-        </div>
-      </div>
-
     </div>
   </section>
 

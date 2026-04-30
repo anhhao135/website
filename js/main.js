@@ -104,6 +104,11 @@
     dot.addEventListener('click', () => { goTo(i); startTimer(); });
   });
 
+  const prevBtn = document.querySelector('.slide-prev');
+  const nextBtn = document.querySelector('.slide-next');
+  if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startTimer(); });
+  if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); startTimer(); });
+
   // Pause on hover so viewers can linger on a piece
   const hero = document.getElementById('hero');
   if (hero) {

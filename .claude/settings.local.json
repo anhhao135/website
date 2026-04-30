@@ -14,7 +14,14 @@
       "WebFetch(domain:qodeinteractive.com)",
       "WebFetch(domain:www.florianmonfrini.com)",
       "WebFetch(domain:www.angelamilosevic.com)",
-      "WebFetch(domain:www.thibaudallie.com)"
+      "WebFetch(domain:www.thibaudallie.com)",
+      "PowerShell(Add-Type -AssemblyName System.IO; $bytes = [System.IO.File]::ReadAllBytes\\(\"c:\\\\Repos\\\\website\\\\research_iebl\\\\Hao Le Project Presentation 2025 Nov 4.pdf\"\\); $text = [System.Text.Encoding]::UTF8.GetString\\($bytes\\); $text -replace '[^\\\\x20-\\\\x7E\\\\r\\\\n]', ' ' | Select-String -Pattern '\\\\b[A-Za-z]{3,}\\\\b' -AllMatches | ForEach-Object { $_.Matches } | Select-Object -First 500 | ForEach-Object { $_.Value } | Out-String)",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import pypdf; print\\('ok'\\)\")",
+      "Bash(python -c \"import PyPDF2; print\\('ok'\\)\")",
+      "Bash(python -c \"import pdfminer; print\\('ok'\\)\")",
+      "Bash(pip install *)",
+      "Bash(python -m pip install pypdf -q)"
     ]
   }
 }

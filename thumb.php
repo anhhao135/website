@@ -17,12 +17,19 @@ $q   = isset($_GET['q'])   ? min(95,   max(30, (int)$_GET['q'])) : 82;
 
 if ($src === '') { http_response_code(400); exit; }
 
-// ── Security: path must resolve inside images/ ──────────────
-$src     = ltrim($src, '/\\');
-$imgRoot = realpath(__DIR__ . '/images');
-$absPath = realpath(__DIR__ . '/' . $src);
-
-if (!$absPath || !$imgRoot || strncmp($absPath, $imgRoot, strlen($imgRoot)) !== 0 || !is_file($absPath)) {
+// ── Security: path must resolve inside an allowed directory ──
+$allowedRoots = ['images', 'research_iebl', 'research_unity'];
+$src          = ltrim($src, '/\\');
+$absPath      = realpath(__DIR__ . '/' . $src);
+$allowed      = false;
+foreach ($allowedRoots as $dir) {
+    $root = realpath(__DIR__ . '/' . $dir);
+    if ($root && $absPath && strncmp($absPath, $root, strlen($root)) === 0) {
+        $allowed = true;
+        break;
+    }
+}
+if (!$allowed || !$absPath || !is_file($absPath)) {
     http_response_code(404); exit;
 }
 

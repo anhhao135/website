@@ -44,3 +44,39 @@ function ph_color(int $i): string {
 function thumb_url(string $rel_path, int $w = 800, int $q = 82): string {
     return '/thumb.php?src=' . rawurlencode($rel_path) . '&w=' . $w . '&q=' . $q;
 }
+
+// Generate a tiny thumbnail server-side, cache to disk, return as inline base64 data URI.
+// Used for blur placeholders that must be available with zero extra HTTP requests.
+function thumb_data_uri(string $abs_path, int $w = 40, int $q = 10): string {
+    $cacheDir  = __DIR__ . '/../cache';
+    $cacheKey  = md5($abs_path . '|' . $w . '|' . $q . '|jpg');
+    $cacheFile = $cacheDir . '/' . $cacheKey . '_placeholder.jpg';
+    $srcMtime  = @filemtime($abs_path);
+
+    if (!file_exists($cacheFile) || filemtime($cacheFile) < $srcMtime) {
+        if (!extension_loaded('gd')) return '';
+        $info = @getimagesize($abs_path);
+        if (!$info) return '';
+        [$origW, $origH, $type] = $info;
+        $newW = min($w, $origW);
+        $newH = (int)round($newW * $origH / $origW);
+        $src = null;
+        switch ($type) {
+            case IMAGETYPE_JPEG: $src = imagecreatefromjpeg($abs_path); break;
+            case IMAGETYPE_PNG:  $src = imagecreatefrompng($abs_path);  break;
+            case IMAGETYPE_GIF:  $src = imagecreatefromgif($abs_path);  break;
+            case IMAGETYPE_WEBP:
+                if (function_exists('imagecreatefromwebp')) $src = imagecreatefromwebp($abs_path);
+                break;
+        }
+        if (!$src) return '';
+        $dst = imagecreatetruecolor($newW, $newH);
+        imagecopyresampled($dst, $src, 0, 0, 0, 0, $newW, $newH, $origW, $origH);
+        imagedestroy($src);
+        if (!is_dir($cacheDir)) mkdir($cacheDir, 0755, true);
+        imagejpeg($dst, $cacheFile, $q);
+        imagedestroy($dst);
+    }
+
+    return 'data:image/jpeg;base64,' . base64_encode(file_get_contents($cacheFile));
+}
