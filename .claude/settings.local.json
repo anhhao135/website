@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's/<img src=\"images\\\\/art\\\\/gallery\\\\//<img loading=\"lazy\" src=\"images\\\\/art\\\\/gallery\\\\//g' art.html)",
+      "Bash(sed -i 's/<img src=\"images\\\\/engineering\\\\//<img loading=\"lazy\" src=\"images\\\\/engineering\\\\//g' engineering.html)",
+      "Bash(sed -i 's/<img src=\"images\\\\/music\\\\//<img loading=\"lazy\" src=\"images\\\\/music\\\\//g' music.html)",
+      "WebFetch(domain:haole.art)",
+      "WebFetch(domain:soundcloud.com)",
+      "Bash(cp \"c:/Repos/website/ECE164_Project/ECE164_Project.pdf\" \"c:/Repos/website-new/ECE164_Project/ECE164_Project.pdf\")",
+      "Bash(cp \"c:/Repos/website/ECE164_Project/cover.png\"          \"c:/Repos/website-new/images/engineering/opamp-cover.png\")",
+      "Bash(cp \"c:/Repos/website/ECE164_Project/my_apple_watch.JPG\" \"c:/Repos/website-new/images/engineering/opamp-apple-watch.jpg\")",
+      "Bash(cp \"c:/Repos/website/img/synthetic_collage.png\"         \"c:/Repos/website-new/images/engineering/synthetic-collage.png\")",
+      "Bash(cp \"c:/Repos/website/hics-paper.pdf\"                    \"c:/Repos/website-new/hics-paper.pdf\")",
+      "WebFetch(domain:qodeinteractive.com)",
+      "WebFetch(domain:www.florianmonfrini.com)",
+      "WebFetch(domain:www.angelamilosevic.com)",
+      "WebFetch(domain:www.thibaudallie.com)"
+    ]
+  }
+}

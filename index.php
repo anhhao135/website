@@ -1,86 +1,97 @@
 <?php
-/**
- * index.php — Homepage slideshow
- * Drop images into /index-slideshow/ to add them. PHP auto-scans.
- */
-require_once 'includes/config.php';
+require_once __DIR__ . '/includes/gallery.php';
 
-$dir  = __DIR__ . '/index-slideshow/';
-$exts = ['jpg','jpeg','png','gif','webp'];
-$images = [];
+$config   = ['title' => 'HAO LE', 'desc' => 'Hao Le — Art, Engineering, Music', 'active' => '', 'dark_header' => true];
+$featured    = scan_images(__DIR__ . '/images/art/featured');
+$total       = max(1, count($featured));
+$le_fill_url = !empty($featured)
+    ? thumb_url('images/art/featured/' . $featured[array_rand($featured)], 1200, 88)
+    : null;
 
-if (is_dir($dir)) {
-  foreach (scandir($dir) as $file) {
-    $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-    if (in_array($ext, $exts) && $file[0] !== '.') {
-      $images[] = $file;
-    }
-  }
-  shuffle($images);
-}
-
-// Ghost text shown per slide (cycles through)
-$ghost_words = ['Works', 'Studies', 'Plein air', 'Ink', 'Watercolor', 'Oil', 'Nature', 'Garden'];
+require __DIR__ . '/includes/head.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= SITE_NAME ?></title>
-  <meta name="description" content="<?= SITE_NAME ?> — artist, engineer, musician.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,opsz,wght@0,6..144,400;1,6..144,400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css">
-</head>
-<body class="home">
 
-<header class="site-header">
-  <a class="wordmark" href="/index.php">
-    <span class="wordmark-dot"></span>
-    <span class="wordmark-text"><?= SITE_NAME ?></span>
-  </a>
-  <nav class="main-nav">
-    <?php foreach ($NAV as $label => $href): ?>
-      <a href="<?= $href ?>"><?= $label ?></a>
-    <?php endforeach; ?>
-  </nav>
-  <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
-</header>
+  <!-- ── Hero Slideshow ──────────────────────────────────────
+       Drop images into images/art/featured/ to populate the slideshow.
+       Files are sorted naturally (01-title.jpg, 02-title.jpg, …).      -->
+  <section id="hero">
+    <div class="slideshow">
 
-<main style="padding-top:0">
-  <div class="slideshow-wrap">
+      <?php if (empty($featured)): ?>
+        <div class="slide active" style="--slide-bg: #111">
+          <div class="slide-caption">
+            <span class="slide-num">—</span>
+            <span class="slide-title">Add images to images/art/featured/</span>
+          </div>
+        </div>
 
-    <?php foreach ($images as $i => $file): ?>
-    <div class="slide <?= $i === 0 ? 'on' : '' ?>">
-      <img
-        src="/index-slideshow/<?= rawurlencode($file) ?>"
-        alt=""
-        <?= $i > 0 ? 'loading="lazy"' : '' ?>
-        decoding="async"
-      >
-      <div class="slide-hero-text">
-        <span><?= $ghost_words[$i % count($ghost_words)] ?></span>
-      </div>
-      <div class="slide-label"><?= htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)) ?></div>
+      <?php else: foreach ($featured as $i => $file):
+          $title = filename_to_title($file);
+          $src   = 'images/art/featured/' . $file;
+      ?>
+        <div class="slide<?= $i === 0 ? ' active' : '' ?>" style="--slide-bg: #111">
+          <img src="<?= htmlspecialchars(thumb_url($src, 1920, 88)) ?>"
+               alt="<?= htmlspecialchars($title) ?>">
+          <div class="slide-caption">
+            <span class="slide-num"><?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?></span>
+            <span class="slide-title"><?= htmlspecialchars($title) ?></span>
+          </div>
+        </div>
+      <?php endforeach; endif; ?>
+
     </div>
-    <?php endforeach; ?>
 
-    <div class="ss-icon">&#9672;</div>
-    <div class="ss-dots" id="ssdots"></div>
+    <div class="slide-controls">
+      <div class="slide-dots">
+        <?php foreach ($featured as $i => $file): ?>
+          <button class="dot<?= $i === 0 ? ' active' : '' ?>"
+                  data-index="<?= $i ?>"
+                  aria-label="Slide <?= $i + 1 ?>"></button>
+        <?php endforeach; ?>
+      </div>
+      <div class="slide-counter">
+        <span class="slide-current">01</span>
+        <span class="slide-sep">/</span>
+        <span class="slide-total"><?= str_pad($total, 2, '0', STR_PAD_LEFT) ?></span>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</main>
+  <!-- ── Name + Intro ──────────────────────────────────────── -->
+  <section id="intro">
+    <div class="container">
+      <?php
+        $le_cls   = $le_fill_url ? 'text-art' : 'text-stroke';
+        $le_style = $le_fill_url ? ' style="background-image:url(\'' . htmlspecialchars($le_fill_url) . '\')"' : '';
+      ?>
+      <h1 class="site-name reveal">HAO <span class="<?= $le_cls ?>"<?= $le_style ?>>LE</span></h1>
+      <p class="intro-text reveal">Art, engineering, and music —<br>a portfolio of creative and technical work.</p>
+    </div>
+  </section>
 
-<footer class="site-footer">
-  <span class="footer-left"><?= SITE_NAME ?>, <?= SITE_YEAR ?>. Thanks for stopping by.</span>
-  <div class="footer-links">
-    <a href="https://github.com/anhhao135/website.git" target="_blank" rel="noopener">GitHub</a>
-    <a href="https://www.linkedin.com/in/hao-le-07b726132/" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-</footer>
+  <!-- ── Section Cards ─────────────────────────────────────── -->
+  <section id="section-links">
+    <div class="container grid-3">
 
-<script src="/js/main.js"></script>
-</body>
-</html>
+      <a href="/art.php" class="section-card reveal">
+        <span class="section-label">01</span>
+        <h2>Art</h2>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/engineering.php" class="section-card reveal">
+        <span class="section-label">02</span>
+        <h2>Engineering</h2>
+        <span class="arrow">→</span>
+      </a>
+
+      <a href="/music.php" class="section-card reveal">
+        <span class="section-label">03</span>
+        <h2>Music</h2>
+        <span class="arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+<?php require __DIR__ . '/includes/footer.php'; ?>

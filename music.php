@@ -1,30 +1,67 @@
 <?php
-$page_title = 'Music';
-require_once 'includes/config.php';
-include 'includes/header.php';
+/**
+ * Music — SoundCloud profile embed + optional album art grid.
+ * Album art is auto-scanned from images/music/ (drop files there to populate).
+ */
+require_once __DIR__ . '/includes/gallery.php';
+
+$config = ['title' => 'Music — HAO LE', 'desc' => 'Music by Hao Le', 'active' => 'music', 'dark_header' => true];
+$images = scan_images(__DIR__ . '/images/music');
+
+require __DIR__ . '/includes/head.php';
 ?>
 
-<div class="wrap">
-  <div class="music-wrap">
-    <span class="cassette">&#128956;</span>
-
-    <div class="music-photo-main">
-      <div class="music-label">Recording</div>
-      <img src="/img/aboutMe/DSC00860.jpeg" alt="Recording" loading="eager" decoding="async">
+  <header class="page-header">
+    <div class="container">
+      <span class="page-owner">HAO LE</span>
+      <span class="page-num">03</span>
+      <h1 class="page-title">Music</h1>
     </div>
+  </header>
 
-    <div class="music-aside">
-      <div>
-        <div class="music-label">Performance</div>
-        <img src="/img/aboutMe/music-cover.jpeg" alt="Music" loading="lazy" decoding="async">
+  <section class="music-section">
+    <div class="container">
+
+      <!-- ── SoundCloud embed ─────────────────────────────────────── -->
+      <div class="sc-wrap reveal">
+        <iframe
+          class="sc-player"
+          scrolling="no"
+          frameborder="no"
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/john_le&color=%23111110&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true">
+        </iframe>
+        <div class="sc-credit">
+          <a href="https://soundcloud.com/john_le" target="_blank" rel="noopener">
+            Open on SoundCloud →
+          </a>
+        </div>
       </div>
-      <p class="music-desc">"Music I make from time to time."</p>
-      <div class="music-glass">
-        <div class="music-label">Listening to lately</div>
-        <p>Novo Amor, Sufjan Stevens,<br>Claude Debussy</p>
-      </div>
+
+      <!-- ── Album art grid (auto-filled from images/music/) ─────── -->
+      <?php if (!empty($images)): ?>
+        <div class="music-grid">
+          <?php foreach ($images as $i => $file):
+            $title = filename_to_title($file);
+            $year  = extract_year($file);
+            $src   = 'images/music/' . $file;
+          ?>
+            <article class="music-item reveal">
+              <div class="music-art" style="background:<?= ph_color($i) ?>">
+                <img loading="lazy"
+                     src="<?= htmlspecialchars(thumb_url($src, 600, 85)) ?>"
+                     alt="<?= htmlspecialchars($title) ?>">
+              </div>
+              <h3 class="music-title"><?= htmlspecialchars($title) ?></h3>
+              <?php if ($year): ?>
+                <p class="music-sub"><?= htmlspecialchars($year) ?></p>
+              <?php endif; ?>
+            </article>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+
     </div>
-  </div>
-</div>
+  </section>
 
-<?php include 'includes/footer.php'; ?>
+<?php require __DIR__ . '/includes/footer.php'; ?>

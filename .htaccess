@@ -1,60 +1,66 @@
-# ─────────────────────────────────────────────
-# haole.art · .htaccess
-# Apache on Synology DSM
-# ─────────────────────────────────────────────
-
+# ── Security ──────────────────────────────────────────
 Options -Indexes
 ServerSignature Off
 
-# ── Serve WebP when browser supports it ──────
+# PHP entry point takes priority over any leftover .html files
+DirectoryIndex index.php index.html
+
+# Block direct access to includes and cache directories
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
-  # Serve .webp if it exists and browser accepts it
-  RewriteCond %{HTTP_ACCEPT} image/webp
-  RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png)$
-  RewriteCond %{REQUEST_FILENAME}\.webp -f
-  RewriteRule ^(.+)\.(jpe?g|png)$ $1.webp [T=image/webp,L]
+  RewriteRule ^(includes|cache)/ - [F,L]
+  # Allow direct access to PDFs and videos; block directory browsing only
+  RewriteRule ^(research_unity|ECE164_Project)/$ - [F,L]
 </IfModule>
 
-<IfModule mod_headers.c>
-  Header append Vary Accept env=REDIRECT_accept
+# ── MIME Types ────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType image/webp             .webp
+  AddType image/avif             .avif
+  AddType font/woff2             .woff2
+  AddType application/javascript .js mjs
 </IfModule>
 
-# ── Gzip compression ─────────────────────────
+# ── Gzip Compression ──────────────────────────────────
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript
-  AddOutputFilterByType DEFLATE text/plain text/xml application/json
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 
-# ── Browser caching ───────────────────────────
+# ── Browser Cache ─────────────────────────────────────
 <IfModule mod_expires.c>
   ExpiresActive On
-
-  # Images — 1 year
-  ExpiresByType image/jpeg  "access plus 1 year"
-  ExpiresByType image/png   "access plus 1 year"
-  ExpiresByType image/webp  "access plus 1 year"
-  ExpiresByType image/gif   "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-
-  # CSS & JS — 1 month (bump filename/query to bust)
-  ExpiresByType text/css              "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-
-  # Fonts — 1 year
-  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html              "access plus 1 hour"
+  ExpiresByType text/css               "access plus 6 months"
+  ExpiresByType application/javascript "access plus 6 months"
+  ExpiresByType image/jpeg             "access plus 1 year"
+  ExpiresByType image/png              "access plus 1 year"
+  ExpiresByType image/webp             "access plus 1 year"
+  ExpiresByType image/avif             "access plus 1 year"
+  ExpiresByType image/gif              "access plus 1 year"
+  ExpiresByType image/svg+xml         "access plus 1 month"
+  ExpiresByType font/woff2             "access plus 1 year"
 </IfModule>
 
-# ── Security headers ─────────────────────────
 <IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=15552000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|ico|svg|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  # Prevent MIME sniffing
   Header set X-Content-Type-Options "nosniff"
+  # Block clickjacking
   Header set X-Frame-Options "SAMEORIGIN"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
-# ── PHP settings ─────────────────────────────
-<IfModule mod_php.c>
-  php_flag display_errors Off
-  php_value default_charset UTF-8
+# ── Custom 404 ────────────────────────────────────────
+ErrorDocument 404 /404.html
+
+# ── ETags off (rely on Cache-Control instead) ─────────
+FileETag None
+<IfModule mod_headers.c>
+  Header unset ETag
 </IfModule>
