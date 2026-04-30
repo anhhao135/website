@@ -43,7 +43,7 @@ require __DIR__ . '/includes/head.php';
           </div>
         </div>
         <div class="pd-cover">
-          <img src="<?= htmlspecialchars(thumb_url('images/engineering/synthetic-collage.png', 900, 88)) ?>"
+          <img src="<?= htmlspecialchars(thumb_url('images/engineering/synthetic-collage.jpg', 900, 88)) ?>"
                alt="Synthetic data collage">
         </div>
       </div>

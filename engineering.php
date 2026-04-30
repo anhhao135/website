@@ -21,7 +21,7 @@ $projects = [
     'link'  => '/iebl-neuromonitoring.php',
   ],
   [
-    'img'   => 'images/engineering/opamp-cover.png',
+    'img'   => 'images/engineering/opamp-cover.jpg',
     'alt'   => '180nm CMOS Op-Amp Design',
     'title' => '180nm CMOS Op-Amp Design',
     'desc'  => 'Designed a 180nm CMOS operational amplifier capable of over 80 dB of gain
@@ -33,7 +33,7 @@ $projects = [
     'link'  => '/op-amp-design.php',
   ],
   [
-    'img'   => 'images/engineering/synthetic-collage.png',
+    'img'   => 'images/engineering/synthetic-collage.jpg',
     'alt'   => 'Synthetic Data Research',
     'title' => 'Synthetic Data Research',
     'desc'  => 'Research into using Unity3D as a versatile synthetic data generation platform
