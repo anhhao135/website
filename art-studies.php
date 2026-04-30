@@ -1,253 +1,52 @@
-﻿<?php
+<?php
+/**
+ * art-studies.php — Sketchbook / Studies
+ * Auto-scans /art-studies-dir/ — just drop images in to add them.
+ */
+$page_title = 'Studies';
+require_once 'includes/config.php';
+include 'includes/header.php';
 
-$directory = 'art/studies';
-$originals_dir = __DIR__ . '/' . $directory . '/originals';
-$compressed_dir = __DIR__ . '/' . $directory . '/compressed';
+$dir  = __DIR__ . '/art-studies-dir/';
+$exts = ['jpg','jpeg','png','gif','webp'];
+$imgs = [];
 
-
-require_once __DIR__ . '/sync_images.php';
-
-sync_images(
-    $originals_dir,
-    $compressed_dir,
-    15
-);
-
+if (is_dir($dir)) {
+  foreach (scandir($dir) as $file) {
+    $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+    if (in_array($ext, $exts) && $file[0] !== '.') {
+      $imgs[] = $file;
+    }
+  }
+  usort($imgs, fn($a,$b) => filemtime($dir.$b) <=> filemtime($dir.$a));
+}
 ?>
 
+<div class="wrap">
+  <div class="art-header">
+    <h1>Studies</h1>
+    <span class="art-count">Sketchbook · ongoing</span>
+  </div>
 
+  <nav class="sub-nav">
+    <a href="/art.php">Works</a>
+    <a href="/art-studies.php" class="active">Studies</a>
+  </nav>
 
+  <div class="studies-intro">Sketchbook &amp; studies</div>
 
-<!DOCTYPE html>
-<html>
- <head>
-    <meta charset="utf-8">
-    <title>Hao Le | Art Studies</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
-
-    <?php include("boilerplate/favicon.php") ?> 
-
- </head>
- <style>
-
-
- .container {
-   position: relative;
-   width: 95%;
- }
-
- .image {
-   opacity: 1;
-   display: block;
-   width: 100%;
-   height: auto;
-   transition: .5s ease;
-   backface-visibility: hidden;
- }
-
- .middle {
-   transition: .5s ease;
-   opacity: 0;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   -ms-transform: translate(-50%, -50%);
-   text-align: center;
- }
-
- .text {
-   background-color: #4CAF50;
-   color: white;
-   font-size: 16px;
-   padding: 16px 32px;
- }
-
- #side-nav-container{
-  display:inline-block;
-  background-color:#e3b578;
-  text-align:left;
-  padding: 25px; 
-  align-self:start;
-  width:fit-content;
-  justify-self:center;
-  margin:20px;
-  font-size: 30px;
- }
-
-   #page-container{
-
-     display: inline-grid;
-     grid-template-columns: 1.2fr 9fr;
-     width: auto;
-     margin-top:20px;
-
-   }
-
-   #side-nav ul li a{
-
-     color:white;
-
-
-   }
-
-   #side-nav ul li{
-
-     display:block;
-     padding:5px;
-
-
-
-   }
-
-   #side-nav{
-
-     display:block;
-
-   }
-
-
-@media (max-width: 900px) {
-
-#side-nav-container{
-  font-size: 20px;
-  padding: 15px;
-}
-
-
-#page-container{
-
- grid-template-columns: 2fr 9fr;
-
-}
-
-}
-
-@media (max-width: 700px) {
-
-#page-container{
-
- grid-template-columns: 1fr;
-
-}
-
-#side-nav ul li{
-
- display:inline;
- vertical-align: middle;
- text-align: center;
- 
-}
-
-#page-container{
-
- margin-top:0px;
-
-}
-
-}
-
-
- #gallery-grid{
- 	display: inline-grid;
- 	grid-template-columns: repeat(4, minmax(200px, 1fr));
- 	justify-items: center;
- 	align-items: center;
- 	width: auto-fit;
- 	row-gap: 50px;
-
-
- }
-
- @media (max-width: 1200px) {
- 		#gallery-grid{
- 			display: inline-grid;
- 			grid-template-columns: 1fr 1fr;
- 			justify-items: center;
- 			align-items: center;
- 			width: auto-fit;
- 			row-gap: 20px;
-
- 	}
-}
-
-   </style>
-
-
-
- <body>
-
-
- <?php include("boilerplate/header.php") ?> 
-
-
-
-
- <main>
-  <div id="page-container">
-
-    <div id="side-nav-container">
-      <nav id="side-nav">
-        <ul>
-            <li><a href="art.php">WORKS</a></li>
-            <li><a href="art-studies.php" style="font-weight:bold; color:#4CAF50">STUDIES</a></li>
-        </ul>
-      </nav>
+  <div class="studies-grid">
+    <?php foreach ($imgs as $i => $file): ?>
+    <div class="s-item">
+      <img
+        src="/art-studies-dir/<?= rawurlencode($file) ?>"
+        alt=""
+        loading="<?= $i < 6 ? 'eager' : 'lazy' ?>"
+        decoding="async"
+      >
     </div>
-
-    <div id="gallery">
-
-      <div id="gallery-grid"> 
-
-
-        <?php
-        $fs_directory  = $compressed_dir;                  // filesystem path
-        $url_directory = '/' . $directory . '/compressed'; // URL path
-
-        $allowed_ext = ['jpg', 'jpeg', 'png', 'webp'];
-
-        $dir_contents = scandir($fs_directory);
-        shuffle($dir_contents);
-
-        foreach ($dir_contents as $file) {
-            if ($file === '.' || $file === '..') continue;
-
-            $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
-            if (!in_array($ext, $allowed_ext, true)) continue;
-
-            $img_url = $url_directory . '/' . $file;
-
-            echo '<div class="container">';
-            echo '<img src="' . htmlspecialchars($img_url) . '" class="image" style="width:100%">';
-            echo '</div>';
-        }
-        ?>
-
-
-        </div>
-
-      </div>
-    </div>
+    <?php endforeach; ?>
+  </div>
 </div>
 
-
-
-
-
-
-</main>
-
-
-
-
-
-
-
-<?php include("boilerplate/footer.php") ?> 
-
- </body>
-
-
-</html>
+<?php include 'includes/footer.php'; ?>

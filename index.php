@@ -1,136 +1,86 @@
+<?php
+/**
+ * index.php — Homepage slideshow
+ * Drop images into /index-slideshow/ to add them. PHP auto-scans.
+ */
+require_once 'includes/config.php';
+
+$dir  = __DIR__ . '/index-slideshow/';
+$exts = ['jpg','jpeg','png','gif','webp'];
+$images = [];
+
+if (is_dir($dir)) {
+  foreach (scandir($dir) as $file) {
+    $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+    if (in_array($ext, $exts) && $file[0] !== '.') {
+      $images[] = $file;
+    }
+  }
+  shuffle($images);
+}
+
+// Ghost text shown per slide (cycles through)
+$ghost_words = ['Works', 'Studies', 'Plein air', 'Ink', 'Watercolor', 'Oil', 'Nature', 'Garden'];
+?>
 <!DOCTYPE html>
-<html>
-    <head>
-    <meta charset="utf-8">
-    <title>Hao Le | Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= SITE_NAME ?></title>
+  <meta name="description" content="<?= SITE_NAME ?> — artist, engineer, musician.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,opsz,wght@0,6..144,400;1,6..144,400&family=Instrument+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="home">
 
-    <?php include("boilerplate/favicon.php") ?> 
+<header class="site-header">
+  <a class="wordmark" href="/index.php">
+    <span class="wordmark-dot"></span>
+    <span class="wordmark-text"><?= SITE_NAME ?></span>
+  </a>
+  <nav class="main-nav">
+    <?php foreach ($NAV as $label => $href): ?>
+      <a href="<?= $href ?>"><?= $label ?></a>
+    <?php endforeach; ?>
+  </nav>
+  <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+</header>
 
-    <script src="slideshow.js"></script>
-    <script>
-    $(function(){
-        $('.fadein img:gt(0)').hide();
-        setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 3000);
-    });
-    </script>
+<main style="padding-top:0">
+  <div class="slideshow-wrap">
 
-    </head>
+    <?php foreach ($images as $i => $file): ?>
+    <div class="slide <?= $i === 0 ? 'on' : '' ?>">
+      <img
+        src="/index-slideshow/<?= rawurlencode($file) ?>"
+        alt=""
+        <?= $i > 0 ? 'loading="lazy"' : '' ?>
+        decoding="async"
+      >
+      <div class="slide-hero-text">
+        <span><?= $ghost_words[$i % count($ghost_words)] ?></span>
+      </div>
+      <div class="slide-label"><?= htmlspecialchars(pathinfo($file, PATHINFO_FILENAME)) ?></div>
+    </div>
+    <?php endforeach; ?>
 
-    <style>
+    <div class="ss-icon">&#9672;</div>
+    <div class="ss-dots" id="ssdots"></div>
 
-        #page_container{
-            width: 100%;
-            height: 100vh;
-            display: flex;                  /*  <-------------- required               */
-		    flex-direction: column;         /*  <-------------- required               */
-		    justify-content: center;
-            position: fixed;
-            z-index: 99; 
-        }
+  </div>
+</main>
 
-        #front_image_dummy{
+<footer class="site-footer">
+  <span class="footer-left"><?= SITE_NAME ?>, <?= SITE_YEAR ?>. Thanks for stopping by.</span>
+  <div class="footer-links">
+    <a href="https://github.com/anhhao135/website.git" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/hao-le-07b726132/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
 
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-
-        }
-
-
-        header{
-            position: fixed;
-            z-index: 100;
-        }
-
-
-        header .header-brand{
-            font-size: 20vw;
-        }
-
-        header nav ul li a{
-            font-size: 25px;
-        }
-
-        header nav{
-            padding: 15px;
-            line-height: 25px;
-        }
-
-        .fadein { 
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            z-index: 0;
-        }
-        .fadein img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            z-index: 0;
-            filter: brightness(0.95);    
-        }
-
-
-
-        @media (max-width: 1000px) {
-
-
-            header nav ul li a{
-                font-size: 20px;
-            }
-
-            header nav{
-                padding: 8px;
-            }
-
-
-            header .header-brand{
-                font-size: 22vw;
-            }
-        
-        }
-
-    </style>
-
-
-    <body>
-        
-
-
-        
-
-        <div class="fadein">
-            <?php 
-            // display images from directory
-            // directory path
-            $dir = "./index-slideshow/";
-            
-            $scan_dir = scandir($dir);
-            shuffle($scan_dir);
-            foreach($scan_dir as $img):
-                if(in_array($img,array('.','..')))
-                continue;
-            ?>
-
-            <img src="<?php echo $dir.$img ?>" alt="<?php echo $img ?>">
-            <?php endforeach; ?>
-
-        </div>
-
-        <div id="page_container">
-            <?php include("boilerplate/header.php") ?> 
-        </div>
-
-        
-
-
-
-    </body>
-
-
-
+<script src="/js/main.js"></script>
+</body>
 </html>

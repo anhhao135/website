@@ -1,168 +1,62 @@
-<!DOCTYPE html>
-<html>
- <head>
-    <meta charset="utf-8">
-    <title>Hao Le | About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<?php
+$page_title = 'About';
+require_once 'includes/config.php';
+include 'includes/header.php';
+?>
 
-    <?php include("boilerplate/favicon.php") ?>
+<div class="wrap">
+  <div class="about-wrap">
 
- </head>
- <style>
-
-   #about-container{
-
-     display: inline-grid;
-     grid-template-columns: 1fr 1fr;
-     justify-items: center;
-     align-items: center;
-     width: 90%;
-     row-gap: 30px;
-     column-gap: 30px;
-     margin-left: auto;
-     margin-right: auto;
-     margin-top: 20px;
-     justify-self:center;
-     line-height: 1.1;
-
-   }
-
-   #about-paragraph{
-     display:block;
-     color: white;
-   }
-
-   #avatar{
-     max-width: 100%;
-     max-height: 80vh;
-   }
-
-   @media (max-width: 900px) {
-   		#about-container{
-        display: inline-grid;
-        grid-template-columns: 1fr;
-   	}
-
-      #avatar{
-        width: 100%;
-      }
-
-  }
-
-  .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  color:white;
-  background-color:#fcb205;
-  display:block;
-}
-
-#links{
-  display:inline-block;
-  list-style-type: none;
-  width: fit-content;
-  text-align:center;
-  justify-self: center;
-  padding:20px;
-
-}
-
-#links li{
-  display: inline-block;
-  float: center;
-  list-style: none;
-  padding: 0 2px;
-
-}
-
-#about-text{
-  height:auto;
-  color: white;
-  font-size: 18px;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-
-.container {
-  display: inline-grid;
- 	width: auto;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  align-items: center;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  overflow: hidden;
-  height: 100%;
-}
-
-.image-in-grid{
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-
-
-
-
-@media (max-width: 1100px) {
-
-  #about-text{
-    font-size:15px;
-    width:90%;
-  }
-
-}
-
-
- </style>
-
-<body>
-
-  <?php include("boilerplate/header.php") ?>
-
-  <main style="text-align:center;">
-
-    <div id="about-container">
-
-        <div class="container">
-          <div class="social">
-            <img src="img/aboutMe/plein-air.jpg" class="image-in-grid"/>
-          </div>
-        </div>
-
-        <div id = "about-text">
-
-             Hello! Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.<br><br>I am currently an electrical engineer at <a href="https://quartus.com/">Quartus Engineering.</a> I got my B.S. and M.S. degrees from UC San Diego, where I was a researcher at the <a href="http://iebl.ucsd.edu/">Integrated Electronics and Biointerfaces Lab</a> supervised by Dr. Shadi Dayeh. If I'm not home hanging out with my amazing <a href="jordan.html">partner,</a> playing guitar, tending my garden, admiring my tarantulas, or decorating fish tanks, I'm probably somewhere really far away with my portable easle, painting nature in front of me.<br><br>If you want to see how I made this website (hosted on an old Dell Poweredge server), visit its repo on <a href="https://github.com/anhhao135/website.git">GitHub.</a> If you want to find out more on my background, or contact me, take a look at my <a href="resume.pdf">résumé</a> or connect with me on <a href="https://www.linkedin.com/in/hao-le-07b726132/">LinkedIn.</a>
-
-        </div>
-
-
-        
-
-        
-
+    <div class="about-photo-wrap">
+      <img class="about-photo"
+           src="/img/aboutMe/plein-air.jpg"
+           alt="Hao Le painting en plein air"
+           loading="eager" decoding="async">
+      <!-- floating glass card -->
+      <div class="about-float">
+        <div class="af-icon">&#128375;</div>
+        <p>EE at Quartus Engineering · UCSD M.S. · paints plein air whenever possible</p>
+      </div>
     </div>
 
-  </main>
+    <div class="about-text reveal">
+      <h2>Hello,<br>I'm Hao.</h2>
 
+      <p>Thanks for checking out my site. I don't get a lot of visitors so it's nice that you're here.</p>
 
+      <p>I am currently an electrical engineer at
+        <a href="https://quartus.com/" target="_blank" rel="noopener">Quartus Engineering</a>.
+        I got my B.S. and M.S. degrees from UC San Diego, where I was a researcher at the
+        <a href="http://iebl.ucsd.edu/" target="_blank" rel="noopener">Integrated Electronics and Biointerfaces Lab</a>
+        supervised by Dr.&nbsp;Shadi Dayeh.
+      </p>
 
-  <?php include("boilerplate/footer.php") ?>
+      <p>If I'm not home hanging out with my amazing
+        <a href="/jordan.html">partner</a>,
+        playing guitar, tending my garden, admiring my tarantulas,
+        or decorating fish tanks — I'm probably somewhere really far away with
+        my portable easel, painting nature right in front of me.
+      </p>
 
-</body>
+      <p>
+        Find me on <a href="https://github.com/anhhao135/website.git" target="_blank" rel="noopener">GitHub</a>,
+        view my <a href="/resume.pdf" target="_blank" rel="noopener">résumé</a>,
+        or connect on <a href="https://www.linkedin.com/in/hao-le-07b726132/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
 
-</html>
+      <div class="interest-pills">
+        <span class="pill">Oil painting</span>
+        <span class="pill">Plein air</span>
+        <span class="pill">Guitar</span>
+        <span class="pill">Tarantulas &#128375;</span>
+        <span class="pill">Fish tanks &#128032;</span>
+        <span class="pill">Gardening &#127807;</span>
+        <span class="pill">Electrical engineering</span>
+        <span class="pill">Biointerfaces</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<?php include 'includes/footer.php'; ?>
