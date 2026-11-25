@@ -2,48 +2,6 @@
    PORTFOLIO — Main Script
    ===================================================== */
 
-// ── Custom Cursor ─────────────────────────────────────
-// Skipped on touch-only devices; uses mix-blend-mode:difference
-// so it auto-inverts over light vs. dark backgrounds.
-(function initCursor() {
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-
-  const el = document.createElement('div');
-  el.className = 'cursor';
-  document.body.appendChild(el);
-
-  let visible = false;
-
-  document.addEventListener('mousemove', e => {
-    el.style.left = e.clientX + 'px';
-    el.style.top  = e.clientY + 'px';
-    if (!visible) {
-      el.style.opacity = '1';
-      visible = true;
-    }
-  });
-
-  document.addEventListener('mouseleave', () => {
-    el.style.opacity = '0';
-    visible = false;
-  });
-
-  // Grow on hover over interactive elements
-  function bindInteractive(root) {
-    root.querySelectorAll('a, button, [role="button"]').forEach(node => {
-      node.addEventListener('mouseenter', () => el.classList.add('hover'));
-      node.addEventListener('mouseleave', () => el.classList.remove('hover'));
-    });
-  }
-
-  bindInteractive(document);
-
-  // Shrink on click
-  document.addEventListener('mousedown', () => el.classList.add('click'));
-  document.addEventListener('mouseup',   () => el.classList.remove('click'));
-})();
-
-
 // ── Navigation ────────────────────────────────────────
 (function initNav() {
   const nav    = document.getElementById('nav');
