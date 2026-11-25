@@ -1,14 +1,27 @@
 <?php
 /**
- * Art gallery — auto-populated from images/art/gallery/
- * To add work: drop an image file in that directory.
- * Filename becomes the title: "03-forest-study-2024.jpg" → "Forest Study", year 2024
+ * Art page — two auto-populated sections:
+ *   Works   → images/art/featured/  (same images as the homepage slideshow)
+ *   Studies → images/art/gallery/   (anything also in featured/ is skipped)
+ * To add a piece: drop an image file into the matching directory.
  */
 require_once __DIR__ . '/includes/gallery.php';
 
 $config = ['title' => 'Art — HAO LE', 'desc' => 'Art by Hao Le', 'active' => 'art', 'dark_header' => true];
-$images = scan_images(__DIR__ . '/images/art/gallery');
-shuffle($images);
+
+$works   = scan_images(__DIR__ . '/images/art/featured');
+$in_works = array_map('strtolower', $works);
+$studies = array_values(array_filter(
+    scan_images(__DIR__ . '/images/art/gallery'),
+    fn($f) => !in_array(strtolower($f), $in_works, true)
+));
+shuffle($works);
+shuffle($studies);
+
+$groups = [
+    ['id' => 'works',   'title' => 'Works',   'dir' => 'images/art/featured', 'files' => $works],
+    ['id' => 'studies', 'title' => 'Studies', 'dir' => 'images/art/gallery',  'files' => $studies],
+];
 
 require __DIR__ . '/includes/head.php';
 ?>
@@ -24,42 +37,41 @@ require __DIR__ . '/includes/head.php';
   <section class="gallery-section">
     <div class="container">
 
-      <?php if (empty($images)): ?>
-        <p class="empty-state">
-          No images yet — add <code>.jpg</code>, <code>.png</code>, or <code>.webp</code>
-          files to <code>images/art/gallery/</code>.
-        </p>
+      <?php foreach ($groups as $g): ?>
+        <div class="art-group" id="<?= $g['id'] ?>">
+          <div class="art-group-head">
+            <h2 class="art-group-title"><?= $g['title'] ?></h2>
+            <span class="art-group-count"><?= str_pad(count($g['files']), 2, '0', STR_PAD_LEFT) ?></span>
+          </div>
 
-      <?php else: ?>
-        <!-- ── To add a piece: drop a file into images/art/gallery/ ── -->
-        <div class="gallery-grid">
-          <?php foreach ($images as $i => $file):
-            $title = filename_to_title($file);
-            $year  = extract_year($file);
-            $src   = 'images/art/gallery/' . $file;
-          ?>
-            <article class="work-item reveal">
-              <a href="#"
-                 class="work-link"
-                 data-full="<?= htmlspecialchars(thumb_url($src, 1600, 90)) ?>">
-                <div class="work-img" style="background:<?= ph_color($i) ?>">
-                  <img loading="lazy"
-                       src="<?= htmlspecialchars(thumb_url($src, 720, 82)) ?>"
-                       alt="<?= htmlspecialchars($title) ?>">
-                  <div class="work-overlay"><span>View</span></div>
-                </div>
-                <div class="work-meta">
-                  <h3 class="work-title"><?= htmlspecialchars($title) ?></h3>
-                  <?php if ($year): ?>
-                    <span class="work-year"><?= htmlspecialchars($year) ?></span>
-                  <?php endif; ?>
-                </div>
-              </a>
-            </article>
-          <?php endforeach; ?>
+          <?php if (empty($g['files'])): ?>
+            <p class="empty-state">
+              No images yet — add files to <code><?= $g['dir'] ?>/</code>.
+            </p>
+
+          <?php else: ?>
+            <div class="gallery-grid">
+              <?php foreach ($g['files'] as $i => $file):
+                $src = $g['dir'] . '/' . $file;
+              ?>
+                <article class="work-item reveal">
+                  <a href="#"
+                     class="work-link"
+                     data-full="<?= htmlspecialchars(thumb_url($src, 1600, 90)) ?>">
+                    <div class="work-img" style="background:<?= ph_color($i) ?>">
+                      <img loading="lazy"
+                           src="<?= htmlspecialchars(thumb_url($src, 720, 82)) ?>"
+                           alt="<?= htmlspecialchars(filename_to_title($file)) ?>">
+                      <div class="work-overlay"><span>View</span></div>
+                    </div>
+                  </a>
+                </article>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
         </div>
+      <?php endforeach; ?>
 
-      <?php endif; ?>
     </div>
   </section>
 
