@@ -58,7 +58,7 @@ body {
 
 #nav.scrolled {
   background:
-    linear-gradient(rgba(31, 31, 31, 0.07), rgba(31, 31, 31, 0.07)),
+    linear-gradient(rgba(31, 31, 31, 0.14), rgba(31, 31, 31, 0.14)),
     rgba(242, 255, 243, 0.65);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -1060,6 +1060,12 @@ body {
 
 .dark-header .page-header .page-title {
   color: var(--white);
+}
+
+/* Darker nav box while floating over a dark header */
+.dark-header #nav:not(.scrolled) {
+  background: rgba(0, 0, 0, 0.35);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Nav text flips white when floating over dark header; logo keeps its box */
