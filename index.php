@@ -34,10 +34,6 @@ require __DIR__ . '/includes/head.php';
           <div class="slide-blur" style="background-image:url('<?= thumb_data_uri(__DIR__ . '/' . $src) ?>')"></div>
           <img src="<?= htmlspecialchars(thumb_url($src, 1920, 88)) ?>"
                alt="<?= htmlspecialchars($title) ?>">
-          <div class="slide-caption">
-            <span class="slide-num"><?= str_pad($i + 1, 2, '0', STR_PAD_LEFT) ?></span>
-            <span class="slide-title"><?= htmlspecialchars($title) ?></span>
-          </div>
         </div>
       <?php endforeach; endif; ?>
 
